@@ -18,6 +18,22 @@ struct Torrent {
     }
 }
 
+extension Torrent: Equatable {
+    
+    static func ==(lhs: Torrent, rhs: Torrent) -> Bool {
+        
+        return lhs.url == rhs.url
+    }
+}
+
+extension Torrent {
+    
+    func send(to server: Server, completion: ((Error?) -> Void)?) {
+        
+        fatalError("implement this")
+    }
+}
+
 extension Array where Element == Torrent {
     
     static var directory: URL {

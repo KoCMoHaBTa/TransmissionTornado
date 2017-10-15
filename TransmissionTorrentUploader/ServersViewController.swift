@@ -14,6 +14,17 @@ class ServersViewController: UITableViewController {
     
     var servers: [Server] = []
     
+    lazy var didSelectServer: ((Server) -> Void)? = { [unowned self] server in
+        
+        guard let url = URL(string: server.address) else {
+            
+            return
+        }
+        
+        let safari = SFSafariViewController(url: url)
+        self.present(safari, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -103,13 +114,6 @@ class ServersViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let server = self.servers[indexPath.row]
-        guard let url = URL(string: server.address) else {
-            
-            return
-        }
-        
-        let safari = SFSafariViewController(url: url)
-        self.present(safari, animated: true, completion: nil)
-        
+        self.didSelectServer?(server)
     }
 }
