@@ -23,13 +23,13 @@ class AddServerViewController: UITableViewController {
     
     @IBAction func add() {
         
-        guard let name = self.nameTextField.text else {
+        guard let name = self.nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), name.isEmpty == false else {
             
             self.nameTextField.becomeFirstResponder()
             return
         }
         
-        guard let address = self.serverAddressTextField.text else {
+        guard let address = self.serverAddressTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), address.isEmpty == false else {
             
             self.serverAddressTextField.becomeFirstResponder()
             return
