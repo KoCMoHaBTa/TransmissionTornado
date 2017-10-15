@@ -13,6 +13,7 @@ class AddServerViewController: UITableViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var serverAddressTextField: UITextField!
+    @IBOutlet weak var downloadDirTextField: UITextField!
     
     var server: Server?
     var didSaveServer: ((Server) -> Void)?
@@ -23,6 +24,7 @@ class AddServerViewController: UITableViewController {
         
         self.nameTextField.text = self.server?.name
         self.serverAddressTextField.text = self.server?.address
+        self.downloadDirTextField.text = self.server?.downloadDir
     }
     
     @IBAction func save() {
@@ -39,7 +41,13 @@ class AddServerViewController: UITableViewController {
             return
         }
         
-        let server = Server(name: name, address: address)
+        guard let downloadDir = self.downloadDirTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), address.isEmpty == false else {
+            
+            self.downloadDirTextField.becomeFirstResponder()
+            return
+        }
+        
+        let server = Server(name: name, address: address, downloadDir: downloadDir)
         self.didSaveServer?(server)
     }
 }

@@ -93,8 +93,8 @@ class ServersViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath)
-        cell.textLabel?.text = self.servers[indexPath.row].name
-        cell.detailTextLabel?.text = self.servers[indexPath.row].address
+        cell.textLabel?.text = self.servers[indexPath.row].name + " - " + self.servers[indexPath.row].address
+        cell.detailTextLabel?.text = self.servers[indexPath.row].downloadDir
         
         return cell
     }
