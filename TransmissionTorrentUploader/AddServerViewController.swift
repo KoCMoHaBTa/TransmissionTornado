@@ -14,14 +14,18 @@ class AddServerViewController: UITableViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var serverAddressTextField: UITextField!
     
-    var didAddServer: ((Server) -> Void)?
+    var server: Server?
+    var didSaveServer: ((Server) -> Void)?
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        self.nameTextField.text = self.server?.name
+        self.serverAddressTextField.text = self.server?.address
     }
     
-    @IBAction func add() {
+    @IBAction func save() {
         
         guard let name = self.nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), name.isEmpty == false else {
             
@@ -36,6 +40,6 @@ class AddServerViewController: UITableViewController {
         }
         
         let server = Server(name: name, address: address)
-        self.didAddServer?(server)
+        self.didSaveServer?(server)
     }
 }

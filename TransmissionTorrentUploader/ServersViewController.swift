@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SafariServices
 
 class ServersViewController: UITableViewController {
     
@@ -24,7 +25,7 @@ class ServersViewController: UITableViewController {
         
         if segue.identifier == "AddServer", let controller = segue.destination as? AddServerViewController {
             
-            controller.didAddServer = { [unowned self] server -> Void in
+            controller.didSaveServer = { [unowned self] server -> Void in
                 
                 self.navigationController?.popToViewController(self, animated: true)
                 
@@ -35,6 +36,26 @@ class ServersViewController: UITableViewController {
                     self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
                     self.tableView.selectRow(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .top)
                     self.tableView.deselectRow(at: IndexPath(row: 0, section: 0), animated: true)
+                }
+            }
+        }
+        
+        if segue.identifier == "EditServer", let controller = segue.destination as? AddServerViewController, let cell = sender as? UITableViewCell, let indexPath = self.tableView.indexPath(for: cell) {
+            
+            let server = self.servers[indexPath.row]
+            controller.server = server
+            
+            controller.didSaveServer = { [unowned self] server -> Void in
+                
+                self.navigationController?.popToViewController(self, animated: true)
+                
+                DispatchQueue.main.async {
+                    
+                    self.servers.remove(at: indexPath.row)
+                    self.servers.insert(server, at: indexPath.row)
+                    self.servers.save()
+                    
+                    self.tableView.reloadRows(at: [indexPath], with: .automatic)
                 }
             }
         }
@@ -80,5 +101,15 @@ class ServersViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let server = self.servers[indexPath.row]
+        guard let url = URL(string: server.address) else {
+            
+            return
+        }
+        
+        let safari = SFSafariViewController(url: url)
+        self.present(safari, animated: true, completion: nil)
+        
     }
 }

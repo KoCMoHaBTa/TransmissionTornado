@@ -97,11 +97,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellID" textLabel="oW8-5Z-I9T" detailTextLabel="49h-kx-SEp" style="IBUITableViewCellStyleValue1" id="LcK-1s-NRx">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="CellID" textLabel="oW8-5Z-I9T" detailTextLabel="49h-kx-SEp" style="IBUITableViewCellStyleValue1" id="LcK-1s-NRx">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LcK-1s-NRx" id="ann-T1-miV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="308" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oW8-5Z-I9T">
@@ -112,7 +112,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="49h-kx-SEp">
-                                            <rect key="frame" x="301" y="12" width="59" height="20.5"/>
+                                            <rect key="frame" x="249" y="12" width="59" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -120,6 +120,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="IdT-Sl-2v4" kind="show" identifier="EditServer" trigger="accessoryAction" id="tZ3-uf-MEH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -182,7 +185,7 @@
                                                     <rect key="frame" x="8" y="6" width="359" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="URL" textContentType="url"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -201,9 +204,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Server" id="69Y-Qu-zYj">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="FDn-lK-IQa">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="FDn-lK-IQa">
                             <connections>
-                                <action selector="add" destination="IdT-Sl-2v4" id="U2v-XP-bF8"/>
+                                <action selector="save" destination="IdT-Sl-2v4" id="txJ-oF-TV8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -234,4 +237,7 @@
             <point key="canvasLocation" x="-1340" y="749"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tZ3-uf-MEH"/>
+    </inferredMetricsTieBreakers>
 </document>
