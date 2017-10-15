@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		E65A1E751F93A0AB00762BB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A1E741F93A0AB00762BB4 /* AppDelegate.swift */; };
-		E65A1E771F93A0AB00762BB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A1E761F93A0AB00762BB4 /* ViewController.swift */; };
 		E65A1E7A1F93A0AB00762BB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E65A1E781F93A0AB00762BB4 /* Main.storyboard */; };
 		E65A1E7C1F93A0AB00762BB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65A1E7B1F93A0AB00762BB4 /* Assets.xcassets */; };
 		E65A1E7F1F93A0AB00762BB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E65A1E7D1F93A0AB00762BB4 /* LaunchScreen.storyboard */; };
+		E65A1E891F93B22700762BB4 /* TorrentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A1E881F93B22700762BB4 /* TorrentsViewController.swift */; };
+		E65A1E8B1F93B23300762BB4 /* ServersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A1E8A1F93B23300762BB4 /* ServersViewController.swift */; };
+		E65A1E8D1F93B4AF00762BB4 /* AddServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A1E8C1F93B4AF00762BB4 /* AddServerViewController.swift */; };
+		E65A1E8F1F93F2B400762BB4 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A1E8E1F93F2B400762BB4 /* Server.swift */; };
+		E65A1E911F93F88B00762BB4 /* Torrent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A1E901F93F88B00762BB4 /* Torrent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E65A1E711F93A0AB00762BB4 /* TransmissionTorrentUploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransmissionTorrentUploader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E65A1E741F93A0AB00762BB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E65A1E761F93A0AB00762BB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E65A1E791F93A0AB00762BB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E65A1E7B1F93A0AB00762BB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E65A1E7E1F93A0AB00762BB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E65A1E801F93A0AB00762BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E65A1E881F93B22700762BB4 /* TorrentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentsViewController.swift; sourceTree = "<group>"; };
+		E65A1E8A1F93B23300762BB4 /* ServersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewController.swift; sourceTree = "<group>"; };
+		E65A1E8C1F93B4AF00762BB4 /* AddServerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServerViewController.swift; sourceTree = "<group>"; };
+		E65A1E8E1F93F2B400762BB4 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		E65A1E901F93F88B00762BB4 /* Torrent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Torrent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				E65A1E741F93A0AB00762BB4 /* AppDelegate.swift */,
-				E65A1E761F93A0AB00762BB4 /* ViewController.swift */,
+				E65A1E881F93B22700762BB4 /* TorrentsViewController.swift */,
+				E65A1E8A1F93B23300762BB4 /* ServersViewController.swift */,
+				E65A1E8C1F93B4AF00762BB4 /* AddServerViewController.swift */,
+				E65A1E901F93F88B00762BB4 /* Torrent.swift */,
+				E65A1E8E1F93F2B400762BB4 /* Server.swift */,
 				E65A1E781F93A0AB00762BB4 /* Main.storyboard */,
 				E65A1E7B1F93A0AB00762BB4 /* Assets.xcassets */,
 				E65A1E7D1F93A0AB00762BB4 /* LaunchScreen.storyboard */,
@@ -136,8 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E65A1E771F93A0AB00762BB4 /* ViewController.swift in Sources */,
+				E65A1E8F1F93F2B400762BB4 /* Server.swift in Sources */,
+				E65A1E8B1F93B23300762BB4 /* ServersViewController.swift in Sources */,
+				E65A1E911F93F88B00762BB4 /* Torrent.swift in Sources */,
 				E65A1E751F93A0AB00762BB4 /* AppDelegate.swift in Sources */,
+				E65A1E891F93B22700762BB4 /* TorrentsViewController.swift in Sources */,
+				E65A1E8D1F93B4AF00762BB4 /* AddServerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
