@@ -30,7 +30,75 @@ extension Torrent {
     
     func send(to server: Server, completion: ((Error?) -> Void)?) {
         
-        fatalError("implement this")
+        struct RequestData: Encodable {
+            
+            let method: String = "torrent-add"
+            let arguments: Arguments
+            
+            struct Arguments: Encodable {
+                
+                let paused = false
+                let downloadDir: String?
+                let metainfo: String //base64 encoded .torrent contents
+                
+                enum CodingKeys: String, CodingKey {
+                    
+                    case paused
+                    case downloadDir = "download-dir"
+                    case metainfo
+                }
+            }
+        }
+        
+        do {
+            
+            let data = try Data(contentsOf: self.url)
+            let requestData = RequestData(arguments: RequestData.Arguments(downloadDir: server.downloadDir, metainfo: data.base64EncodedString()))
+            
+            guard let url = URL(string: server.address)?.appendingPathComponent("/transmission/rpc") else {
+                
+                completion?(NSError(domain: NSURLErrorDomain, code: NSURLErrorUnsupportedURL, userInfo: [NSURLErrorFailingURLStringErrorKey: server.address]))
+                return
+            }
+            
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.httpBody = try JSONEncoder().encode(requestData)
+            
+            func performRequest() {
+                
+                URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+                    
+                    if let error = error {
+                        
+                        completion?(error)
+                        return
+                    }
+                    
+                    if let response = response as? HTTPURLResponse, response.statusCode == 409, let session = response.allHeaderFields["X-Transmission-Session-Id"] as? String {
+                        
+                        request.setValue(session, forHTTPHeaderField: "X-Transmission-Session-Id")
+                        performRequest()
+                        return
+                    }
+                    
+                    guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+                        
+                        completion?(NSError(domain: NSURLErrorDomain, code: NSURLErrorUnknown, userInfo: nil))
+                        return
+                    }
+                    
+                    completion?(nil)
+                    
+                }).resume()
+            }
+            
+            performRequest()
+        }
+        catch {
+            
+            completion?(error)
+        }
     }
 }
 

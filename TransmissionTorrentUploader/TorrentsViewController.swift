@@ -70,27 +70,30 @@ class TorrentsViewController: UITableViewController {
         
         torrent.send(to: server) { (error) in
             
-            if let error = error {
+            DispatchQueue.main.async {
                 
-                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-                return
-            }
-            
-            //show the server
-            if let url = URL(string: server.address) {
+                if let error = error {
+                    
+                    let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    return
+                }
                 
-                let safari = SFSafariViewController(url: url)
-                self.present(safari, animated: true, completion: nil)
-            }
-            
-            //delete the torrent
-            if let index = self.torrents.index(of: torrent) {
+                //show the server
+                if let url = URL(string: server.address) {
+                    
+                    let safari = SFSafariViewController(url: url)
+                    self.present(safari, animated: true, completion: nil)
+                }
                 
-                self.torrents.remove(at: index)
-                try? FileManager.default.removeItem(at: torrent.url)
-                self.tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
+                //delete the torrent
+                if let index = self.torrents.index(of: torrent) {
+                    
+                    self.torrents.remove(at: index)
+                    try? FileManager.default.removeItem(at: torrent.url)
+                    self.tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
+                }
             }
         }
     }
