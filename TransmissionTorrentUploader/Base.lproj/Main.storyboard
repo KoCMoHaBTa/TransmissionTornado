@@ -75,7 +75,7 @@
         <scene sceneID="NFS-Y4-Vj1">
             <objects>
                 <navigationController id="jR6-Op-drj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Torrents" id="WyW-dp-whj"/>
+                    <tabBarItem key="tabBarItem" title="Torrents" image="downloads_icon" id="WyW-dp-whj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t9z-am-WMG">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -245,7 +245,7 @@
         <scene sceneID="ZIS-z3-sS3">
             <objects>
                 <navigationController id="qFb-4O-ewd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Servers" id="DW0-pM-UYk"/>
+                    <tabBarItem key="tabBarItem" title="Servers" image="servers_icon" id="DW0-pM-UYk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vNs-Ts-ZMl">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -259,6 +259,10 @@
             <point key="canvasLocation" x="-1340" y="749"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="downloads_icon" width="25" height="25"/>
+        <image name="servers_icon" width="25" height="25"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tZ3-uf-MEH"/>
     </inferredMetricsTieBreakers>
