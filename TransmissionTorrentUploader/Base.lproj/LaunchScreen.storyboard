@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="bgb-3R-SdA">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bgb-3R-SdA" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="PpQ-Ch-3lP"/>
-                            <constraint firstItem="bgb-3R-SdA" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="20" id="bsb-qj-yNf"/>
+                            <constraint firstItem="bgb-3R-SdA" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="bsb-qj-yNf"/>
                             <constraint firstAttribute="trailing" secondItem="bgb-3R-SdA" secondAttribute="trailing" id="gGY-N0-Aes"/>
                             <constraint firstAttribute="bottom" secondItem="bgb-3R-SdA" secondAttribute="bottom" id="qO5-4A-Wtp"/>
                         </constraints>
