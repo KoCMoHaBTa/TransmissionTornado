@@ -108,7 +108,7 @@
 				TargetAttributes = {
 					E65A1E701F93A0AB00762BB4 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -290,12 +290,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W2ZM5597BG;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 4RC8K35TSD;
 				INFOPLIST_FILE = TransmissionTorrentUploader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.TransmissionTorrentUploader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "34e6d5cd-a19b-4bab-ae30-0a23cdea937e";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Development Provisioning Profile";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,12 +307,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W2ZM5597BG;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 4RC8K35TSD;
 				INFOPLIST_FILE = TransmissionTorrentUploader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.TransmissionTorrentUploader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "34e6d5cd-a19b-4bab-ae30-0a23cdea937e";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Development Provisioning Profile";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
