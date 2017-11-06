@@ -17,7 +17,7 @@
                BlueprintIdentifier = "E65A1E701F93A0AB00762BB4"
                BuildableName = "iOS.app"
                BlueprintName = "iOS"
-               ReferencedContainer = "container:Transmission&#x1f32a;&#xfe0f;.xcodeproj">
+               ReferencedContainer = "container:TransmissionTornado.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -36,7 +36,7 @@
             BlueprintIdentifier = "E65A1E701F93A0AB00762BB4"
             BuildableName = "iOS.app"
             BlueprintName = "iOS"
-            ReferencedContainer = "container:Transmission&#x1f32a;&#xfe0f;.xcodeproj">
+            ReferencedContainer = "container:TransmissionTornado.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -60,7 +60,7 @@
             BlueprintIdentifier = "E65A1E701F93A0AB00762BB4"
             BuildableName = "iOS.app"
             BlueprintName = "iOS"
-            ReferencedContainer = "container:Transmission&#x1f32a;&#xfe0f;.xcodeproj">
+            ReferencedContainer = "container:TransmissionTornado.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,7 +79,7 @@
             BlueprintIdentifier = "E65A1E701F93A0AB00762BB4"
             BuildableName = "iOS.app"
             BlueprintName = "iOS"
-            ReferencedContainer = "container:Transmission&#x1f32a;&#xfe0f;.xcodeproj">
+            ReferencedContainer = "container:TransmissionTornado.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

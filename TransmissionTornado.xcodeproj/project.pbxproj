@@ -112,7 +112,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E65A1E6C1F93A0AB00762BB4 /* Build configuration list for PBXProject "Transmission🌪️" */;
+			buildConfigurationList = E65A1E6C1F93A0AB00762BB4 /* Build configuration list for PBXProject "TransmissionTornado" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -294,7 +294,7 @@
 				DEVELOPMENT_TEAM = 4RC8K35TSD;
 				INFOPLIST_FILE = iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.KoCMoHaBTa.Transmission---.iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.TransmissionTornado.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "34e6d5cd-a19b-4bab-ae30-0a23cdea937e";
 				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Development Provisioning Profile";
@@ -311,7 +311,7 @@
 				DEVELOPMENT_TEAM = 4RC8K35TSD;
 				INFOPLIST_FILE = iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.KoCMoHaBTa.Transmission---.iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.TransmissionTornado.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "34e6d5cd-a19b-4bab-ae30-0a23cdea937e";
 				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Development Provisioning Profile";
@@ -323,7 +323,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E65A1E6C1F93A0AB00762BB4 /* Build configuration list for PBXProject "Transmission🌪️" */ = {
+		E65A1E6C1F93A0AB00762BB4 /* Build configuration list for PBXProject "TransmissionTornado" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E65A1E811F93A0AB00762BB4 /* Debug */,
