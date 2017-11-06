@@ -81,7 +81,7 @@ class TorrentsViewController: UITableViewController {
                 }
                 
                 //show the server
-                if let url = URL(string: server.address) {
+                if let url = URL(string: server.address), url.scheme?.lowercased() == "http" || url.scheme?.lowercased() == "https" {
                     
                     let safari = SFSafariViewController(url: url)
                     self.present(safari, animated: true, completion: nil)

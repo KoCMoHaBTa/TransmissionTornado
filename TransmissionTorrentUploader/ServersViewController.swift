@@ -16,8 +16,11 @@ class ServersViewController: UITableViewController {
     
     lazy var didSelectServer: ((Server) -> Void)? = { [unowned self] server in
         
-        guard let url = URL(string: server.address) else {
+        guard let url = URL(string: server.address), url.scheme?.lowercased() == "http" || url.scheme?.lowercased() == "https" else {
             
+            let alert = UIAlertController(title: "Cannot open server.", message: "Scheme is not supported. Only 'http' and 'https' url shceme is supported", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+            self.present(alert, animated: true)
             return
         }
         
