@@ -157,6 +157,9 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Delete" id="pa3-QI-u2k">
+                                            <string key="keyEquivalent" base64-UTF8="YES">
+CA
+</string>
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="delete:" target="Ady-hI-5gd" id="0Mk-Ml-PaM"/>
@@ -700,10 +703,16 @@
                                         <segue destination="sd2-0i-d4T" kind="show" id="cc1-YB-sdk"/>
                                     </connections>
                                 </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="1EB2A228-A8C9-4B40-B482-C1B1CEA174F4" label="Delete Server" paletteLabel="Delete Server" tag="-1" image="NSRemoveTemplate" id="dJj-p2-duh">
+                                    <connections>
+                                        <action selector="delete:" target="Oky-zY-oP4" id="Yc7-Sp-bFz"/>
+                                    </connections>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="zTj-yR-xhI"/>
                                 <toolbarItem reference="VNb-NC-Omx"/>
+                                <toolbarItem reference="dJj-p2-duh"/>
                                 <toolbarItem reference="d1r-Os-Zmv"/>
                                 <toolbarItem reference="zTj-yR-xhI"/>
                             </defaultToolbarItems>
@@ -995,6 +1004,7 @@ Gw
     </scenes>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSRemoveTemplate" width="11" height="11"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="cc1-YB-sdk"/>

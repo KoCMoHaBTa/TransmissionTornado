@@ -82,5 +82,26 @@ class ServersViewController: NSViewController, NSTableViewDataSource, NSTableVie
         
         return cell
     }
+    
+    @IBAction func delete(_ sender: Any?) {
+        
+        let row = self.tableView.selectedRow
+        guard row >= 0 else {
+            
+            return
+        }
+        
+        self.servers.remove(at: row)
+        self.servers.save()
+        self.tableView.removeRows(at: IndexSet(integer: row), withAnimation: [.effectFade])
+        
+        let nextRow = row - 1
+        if nextRow >= 0 {
+            
+            self.tableView.selectRowIndexes(IndexSet(integer: nextRow), byExtendingSelection: false)
+        }
+    }
+    
+    
 }
 

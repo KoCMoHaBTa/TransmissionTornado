@@ -31,12 +31,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         return true
     }
-    
-    
-    //MARK: - Menu Actions
-    
-    @IBAction func newServerAction(_ sender: Any?) {
-        
-    }
 }
 
