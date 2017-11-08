@@ -44,6 +44,7 @@ class AddServerViewController: UITableViewController {
         let downloadDir = self.downloadDirTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         
         let server = Server(name: name, address: address, downloadDir: downloadDir)
+        [Server].add(server)
         self.didSaveServer?(server)
     }
 }

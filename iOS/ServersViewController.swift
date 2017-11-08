@@ -32,6 +32,8 @@ class ServersViewController: UITableViewController {
         
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(receivedDidAddServer(notification:)), name: .DidAddServer, object: nil)
+        
         self.loadData()
     }
     
@@ -42,15 +44,6 @@ class ServersViewController: UITableViewController {
             controller.didSaveServer = { [unowned self] server -> Void in
                 
                 self.navigationController?.popToViewController(self, animated: true)
-                
-                DispatchQueue.main.async {
-                    
-                    self.servers.insert(server, at: 0)
-                    self.servers.save()
-                    self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
-                    self.tableView.selectRow(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .top)
-                    self.tableView.deselectRow(at: IndexPath(row: 0, section: 0), animated: true)
-                }
             }
         }
         
@@ -79,6 +72,23 @@ class ServersViewController: UITableViewController {
         
         self.servers = .load()
         self.tableView.reloadData()
+    }
+    
+    //MARK: - Notifications
+    
+    @objc func receivedDidAddServer(notification: Notification) {
+        
+        guard let server = notification.userInfo?["server"] as? Server else {
+            
+            self.servers = .load()
+            self.tableView.reloadData()
+            return
+        }
+        
+        self.servers.insert(server, at: 0)
+        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        self.tableView.selectRow(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .top)
+        self.tableView.deselectRow(at: IndexPath(row: 0, section: 0), animated: true)
     }
     
     //MARK: - UITableViewDataSource & UITableViewDelegate
