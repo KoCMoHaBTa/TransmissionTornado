@@ -37,4 +37,18 @@ extension Array where Element == Server {
         
         try? PropertyListEncoder().encode(self).write(to: type(of: self).url)
     }
+    
+    static func add(_ server: Server) {
+        
+        var servers = self.load()
+        servers.append(server)
+        servers.save()
+        
+        NotificationCenter.default.post(name: .DidAddServer, object: nil, userInfo: ["server": server])
+    }
+}
+
+extension Notification.Name {
+    
+    static let DidAddServer = Notification.Name("DidAddServer")
 }
