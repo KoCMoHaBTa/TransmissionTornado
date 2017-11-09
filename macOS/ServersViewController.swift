@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ServersViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
+class ServersViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate, NSUserInterfaceValidations {
     
     @IBOutlet weak var tableView: NSTableView!
     
@@ -102,6 +102,19 @@ class ServersViewController: NSViewController, NSTableViewDataSource, NSTableVie
         }
     }
     
+    @IBAction func viewServer(_ sender: Any?) {
+        
+        
+    }
     
+    func validateUserInterfaceItem(_ item: NSValidatedUserInterfaceItem) -> Bool {
+        
+        if item.action == #selector(viewServer(_:)) || item.action == #selector(delete(_:)) {
+            
+            return self.tableView.selectedRow >= 0
+        }
+        
+        return true
+    }
 }
 

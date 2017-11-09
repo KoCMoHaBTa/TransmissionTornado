@@ -708,12 +708,18 @@ CA
                                         <action selector="delete:" target="Oky-zY-oP4" id="Yc7-Sp-bFz"/>
                                     </connections>
                                 </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="E4F9CAD2-3E48-4A06-9C77-514FB0D52BD4" label="View Server" paletteLabel="View Server" tag="-1" image="NSInfo" id="AKn-pe-krQ">
+                                    <connections>
+                                        <action selector="viewServer:" target="Oky-zY-oP4" id="Qq3-RP-UTN"/>
+                                    </connections>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="zTj-yR-xhI"/>
-                                <toolbarItem reference="VNb-NC-Omx"/>
-                                <toolbarItem reference="dJj-p2-duh"/>
                                 <toolbarItem reference="d1r-Os-Zmv"/>
+                                <toolbarItem reference="dJj-p2-duh"/>
+                                <toolbarItem reference="VNb-NC-Omx"/>
+                                <toolbarItem reference="AKn-pe-krQ"/>
                                 <toolbarItem reference="zTj-yR-xhI"/>
                             </defaultToolbarItems>
                         </toolbar>
@@ -1004,6 +1010,7 @@ Gw
     </scenes>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSInfo" width="32" height="32"/>
         <image name="NSRemoveTemplate" width="11" height="11"/>
     </resources>
     <inferredMetricsTieBreakers>
