@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SafariServices
 
 class ServersViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate, NSUserInterfaceValidations {
     
@@ -83,6 +84,8 @@ class ServersViewController: NSViewController, NSTableViewDataSource, NSTableVie
         return cell
     }
     
+    //MARK: - Actions
+    
     @IBAction func delete(_ sender: Any?) {
         
         let row = self.tableView.selectedRow
@@ -104,8 +107,22 @@ class ServersViewController: NSViewController, NSTableViewDataSource, NSTableVie
     
     @IBAction func viewServer(_ sender: Any?) {
         
+        let row = self.tableView.selectedRow
+        guard row >= 0 else {
+            
+            return
+        }
         
+        let server = self.servers[row]
+        guard let url = URL(string: server.address) else {
+            
+            return
+        }
+        
+        NSWorkspace.shared.open(url)
     }
+    
+    //MARK: - NSUserInterfaceValidations
     
     func validateUserInterfaceItem(_ item: NSValidatedUserInterfaceItem) -> Bool {
         

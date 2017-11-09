@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="13529"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
@@ -63,7 +64,7 @@
                                         <menuItem title="New Server" keyEquivalent="n" id="Was-JA-tGl">
                                             <connections>
                                                 <action selector="newServerAction:" target="Voe-Tx-rLC" id="BSe-WX-C2t"/>
-                                                <segue destination="sd2-0i-d4T" kind="show" id="lr0-c8-hKS"/>
+                                                <segue destination="sd2-0i-d4T" kind="modal" id="lr0-c8-hKS"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
@@ -694,13 +695,13 @@ CA
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="870" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
-                        <toolbar key="toolbar" implicitIdentifier="3A87D49B-B805-456E-86BC-B8B379112A0E" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="pw3-dh-zBJ">
+                        <toolbar key="toolbar" implicitIdentifier="3A87D49B-B805-456E-86BC-B8B379112A0E" displayMode="iconAndLabel" sizeMode="small" id="pw3-dh-zBJ">
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="zTj-yR-xhI"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="VNb-NC-Omx"/>
                                 <toolbarItem implicitItemIdentifier="DDAEA591-F37C-4DD3-97D3-3FB5D0F5EC48" label="Add Server" paletteLabel="Add Server" tag="-1" image="NSAddTemplate" id="d1r-Os-Zmv">
                                     <connections>
-                                        <segue destination="sd2-0i-d4T" kind="show" id="cc1-YB-sdk"/>
+                                        <segue destination="sd2-0i-d4T" kind="sheet" id="cc1-YB-sdk"/>
                                     </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="1EB2A228-A8C9-4B40-B482-C1B1CEA174F4" label="Delete Server" paletteLabel="Delete Server" tag="-1" image="NSRemoveTemplate" id="dJj-p2-duh">
@@ -715,12 +716,10 @@ CA
                                 </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
-                                <toolbarItem reference="zTj-yR-xhI"/>
                                 <toolbarItem reference="d1r-Os-Zmv"/>
                                 <toolbarItem reference="dJj-p2-duh"/>
                                 <toolbarItem reference="VNb-NC-Omx"/>
                                 <toolbarItem reference="AKn-pe-krQ"/>
-                                <toolbarItem reference="zTj-yR-xhI"/>
                             </defaultToolbarItems>
                         </toolbar>
                         <connections>
@@ -857,6 +856,7 @@ CA
                                                 </tableColumn>
                                             </tableColumns>
                                             <connections>
+                                                <action trigger="doubleAction" selector="viewServer:" target="XfG-lQ-9wD" id="Rf9-lp-k1o"/>
                                                 <outlet property="dataSource" destination="XfG-lQ-9wD" id="1wB-9U-UVe"/>
                                                 <outlet property="delegate" destination="XfG-lQ-9wD" id="GDx-KA-37g"/>
                                             </connections>
@@ -892,6 +892,34 @@ CA
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="30" y="842"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vAM-WV-36K">
+            <objects>
+                <viewController id="EUP-d9-8VG" sceneMemberID="viewController">
+                    <view key="view" id="2Q8-wy-DNH">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uhu-Ml-jOs">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Uhu-Ml-jOs" secondAttribute="trailing" id="HKJ-Wp-LLc"/>
+                            <constraint firstItem="Uhu-Ml-jOs" firstAttribute="top" secondItem="2Q8-wy-DNH" secondAttribute="top" id="erK-qr-5Ys"/>
+                            <constraint firstAttribute="bottom" secondItem="Uhu-Ml-jOs" secondAttribute="bottom" id="tQd-6Z-ckS"/>
+                            <constraint firstItem="Uhu-Ml-jOs" firstAttribute="leading" secondItem="2Q8-wy-DNH" secondAttribute="leading" id="yHE-V0-Dse"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="dRX-z3-aaX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983" y="317"/>
         </scene>
         <!--Add Server-->
         <scene sceneID="ASJ-db-Fnh">
@@ -1014,6 +1042,6 @@ Gw
         <image name="NSRemoveTemplate" width="11" height="11"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cc1-YB-sdk"/>
+        <segue reference="lr0-c8-hKS"/>
     </inferredMetricsTieBreakers>
 </document>
