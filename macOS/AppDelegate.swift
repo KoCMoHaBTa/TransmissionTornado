@@ -31,5 +31,50 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         return true
     }
+    
+    func application(_ sender: NSApplication, openFile filename: String) -> Bool {
+
+
+        return true
+    }
+    
+    @IBAction func openTorrent(_ sender: Any?) {
+        
+        let serversDropDown = ServersSelectionDropDown.default
+        let panel = NSOpenPanel()
+        panel.accessoryView = serversDropDown
+        panel.isAccessoryViewDisclosed = true
+        
+        panel.begin { (response) in
+            
+            if case .OK = response, let url = panel.urls.first {
+                
+                DispatchQueue.main.async {
+                    
+                    let server = serversDropDown.selectedServer
+                    let torrent = Torrent(url: url)
+                    torrent.send(to: server, completion: { (error) in
+                        
+                        if let error = error {
+                            
+                            DispatchQueue.main.async {
+                                
+                                NSAlert(error: error).runModal()
+                            }
+                            return
+                        }
+                        
+                        //show the server
+                        if let url = URL(string: server.address) {
+                            
+                            NSWorkspace.shared.open(url)
+                        }
+                    })
+                }
+            }
+        }
+        
+        
+    }
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6039F7B1FB76D0000DC035A /* ServersSelectionDropDown.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6039F7A1FB76D0000DC035A /* ServersSelectionDropDown.xib */; };
+		E6039F7D1FB76D2C00DC035A /* ServersSelectionDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6039F7C1FB76D2C00DC035A /* ServersSelectionDropDown.swift */; };
 		E657DCD11FB267BA009FED71 /* AddServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E657DCD01FB267BA009FED71 /* AddServerViewController.swift */; };
 		E65A1E751F93A0AB00762BB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A1E741F93A0AB00762BB4 /* AppDelegate.swift */; };
 		E65A1E7A1F93A0AB00762BB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E65A1E781F93A0AB00762BB4 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E6039F7A1FB76D0000DC035A /* ServersSelectionDropDown.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServersSelectionDropDown.xib; sourceTree = "<group>"; };
+		E6039F7C1FB76D2C00DC035A /* ServersSelectionDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersSelectionDropDown.swift; sourceTree = "<group>"; };
 		E657DCD01FB267BA009FED71 /* AddServerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServerViewController.swift; sourceTree = "<group>"; };
 		E65A1E711F93A0AB00762BB4 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E65A1E741F93A0AB00762BB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				E6FBD07F1FB1076E00226930 /* ServersViewController.swift */,
 				E657DCD01FB267BA009FED71 /* AddServerViewController.swift */,
 				E6FBD0831FB1076E00226930 /* Main.storyboard */,
+				E6039F7A1FB76D0000DC035A /* ServersSelectionDropDown.xib */,
+				E6039F7C1FB76D2C00DC035A /* ServersSelectionDropDown.swift */,
 				E6FBD0861FB1076E00226930 /* Info.plist */,
 				E6FBD0871FB1076E00226930 /* macOS.entitlements */,
 			);
@@ -215,6 +221,7 @@
 			files = (
 				E6FBD08E1FB1082000226930 /* Assets.xcassets in Resources */,
 				E6FBD0851FB1076E00226930 /* Main.storyboard in Resources */,
+				E6039F7B1FB76D0000DC035A /* ServersSelectionDropDown.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +247,7 @@
 			files = (
 				E6FBD0801FB1076E00226930 /* ServersViewController.swift in Sources */,
 				E657DCD11FB267BA009FED71 /* AddServerViewController.swift in Sources */,
+				E6039F7D1FB76D2C00DC035A /* ServersSelectionDropDown.swift in Sources */,
 				E6FBD07E1FB1076E00226930 /* AppDelegate.swift in Sources */,
 				E6FBD08D1FB107F600226930 /* Server.swift in Sources */,
 				E6FBD08C1FB107F500226930 /* Torrent.swift in Sources */,
@@ -423,7 +431,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -442,7 +449,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;

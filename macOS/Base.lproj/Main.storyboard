@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
-        <plugIn identifier="com.apple.WebKit2IBPlugin" version="13529"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
@@ -67,9 +66,9 @@
                                                 <segue destination="sd2-0i-d4T" kind="modal" id="lr0-c8-hKS"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
+                                        <menuItem title="Open Torrent" keyEquivalent="o" id="IAo-SY-fd9">
                                             <connections>
-                                                <action selector="openDocument:" target="Ady-hI-5gd" id="bVn-NM-KNZ"/>
+                                                <action selector="openTorrent:" target="Ady-hI-5gd" id="JJl-Z5-VsO"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Open Recent" id="tXI-mr-wws">
@@ -719,8 +718,14 @@ CA
                                         <action selector="editServer:" target="Oky-zY-oP4" id="wXT-63-m51"/>
                                     </connections>
                                 </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="78C85F6B-9697-40CF-84D7-B13FF0502F15" label="Open Torrent" paletteLabel="Open Torrent" tag="-1" image="NSFolder" id="5mR-fZ-WoK">
+                                    <connections>
+                                        <action selector="openTorrent:" target="Oky-zY-oP4" id="nXN-PX-BMJ"/>
+                                    </connections>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
+                                <toolbarItem reference="5mR-fZ-WoK"/>
                                 <toolbarItem reference="d1r-Os-Zmv"/>
                                 <toolbarItem reference="dJj-p2-duh"/>
                                 <toolbarItem reference="VNb-NC-Omx"/>
@@ -743,7 +748,7 @@ CA
         <!--Servers View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ServersViewController" customModule="macOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ServersViewController" id="XfG-lQ-9wD" customClass="ServersViewController" customModule="macOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="795" height="374"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -899,34 +904,6 @@ CA
             </objects>
             <point key="canvasLocation" x="30" y="842"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="vAM-WV-36K">
-            <objects>
-                <viewController id="EUP-d9-8VG" sceneMemberID="viewController">
-                    <view key="view" id="2Q8-wy-DNH">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uhu-Ml-jOs">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Uhu-Ml-jOs" secondAttribute="trailing" id="HKJ-Wp-LLc"/>
-                            <constraint firstItem="Uhu-Ml-jOs" firstAttribute="top" secondItem="2Q8-wy-DNH" secondAttribute="top" id="erK-qr-5Ys"/>
-                            <constraint firstAttribute="bottom" secondItem="Uhu-Ml-jOs" secondAttribute="bottom" id="tQd-6Z-ckS"/>
-                            <constraint firstItem="Uhu-Ml-jOs" firstAttribute="leading" secondItem="2Q8-wy-DNH" secondAttribute="leading" id="yHE-V0-Dse"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <customObject id="dRX-z3-aaX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="983" y="317"/>
-        </scene>
         <!--Add Server-->
         <scene sceneID="ASJ-db-Fnh">
             <objects>
@@ -1044,11 +1021,12 @@ Gw
     </scenes>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSFolder" width="32" height="32"/>
         <image name="NSInfo" width="32" height="32"/>
         <image name="NSMobileMe" width="32" height="32"/>
         <image name="NSRemoveTemplate" width="11" height="11"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cc1-YB-sdk"/>
+        <segue reference="lr0-c8-hKS"/>
     </inferredMetricsTieBreakers>
 </document>
