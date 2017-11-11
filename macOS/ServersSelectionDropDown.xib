@@ -64,12 +64,14 @@
                 </customView>
             </subviews>
             <constraints>
-                <constraint firstItem="c22-O7-iKe" firstAttribute="leading" secondItem="K7s-VT-v2q" secondAttribute="leading" constant="10" id="0gk-Xc-aeq"/>
+                <constraint firstItem="c22-O7-iKe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="K7s-VT-v2q" secondAttribute="leading" constant="10" id="0gk-Xc-aeq"/>
                 <constraint firstItem="c22-O7-iKe" firstAttribute="top" secondItem="K7s-VT-v2q" secondAttribute="top" constant="10" id="2tl-Rj-7kU"/>
                 <constraint firstAttribute="bottom" secondItem="c22-O7-iKe" secondAttribute="bottom" constant="10" id="JmL-Kb-VkE"/>
-                <constraint firstAttribute="trailing" secondItem="c22-O7-iKe" secondAttribute="trailing" constant="10" id="ZlP-WU-yhp"/>
+                <constraint firstItem="c22-O7-iKe" firstAttribute="centerX" secondItem="K7s-VT-v2q" secondAttribute="centerX" id="RIE-Yf-tCR"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c22-O7-iKe" secondAttribute="trailing" constant="10" id="ZlP-WU-yhp"/>
             </constraints>
             <connections>
+                <outlet property="addServerButton" destination="7Zb-MZ-BTv" id="U5u-b3-9kU"/>
                 <outlet property="serversDropDown" destination="pO7-tq-hbY" id="KIL-Hf-P4f"/>
                 <outlet property="titleLabel" destination="KKU-cB-Ohm" id="J3L-53-bv6"/>
             </connections>

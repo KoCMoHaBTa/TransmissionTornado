@@ -21,11 +21,19 @@ class ServersSelectionDropDown: NSView {
         }
     }
     
+    @IBOutlet weak var addServerButton: NSButton!
+    
     lazy var servers = [Server].load()
     
-    var selectedServer: Server {
+    var selectedServer: Server? {
         
-        return self.servers[self.serversDropDown.indexOfSelectedItem]
+        let index = self.serversDropDown.indexOfSelectedItem
+        guard index >= 0 else {
+            
+            return nil
+        }
+        
+        return self.servers[index]
     }
     
     static var `default`: ServersSelectionDropDown {
@@ -45,6 +53,7 @@ class ServersSelectionDropDown: NSView {
         controller.didSaveServer = { server in
             
             [Server].add(server)
+            self.servers.append(server)
             self.serversDropDown.addItem(withTitle: server.name)
             self.serversDropDown.selectItem(at: self.serversDropDown.itemTitles.count - 1)
         }

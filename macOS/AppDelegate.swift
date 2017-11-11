@@ -44,6 +44,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let panel = NSOpenPanel()
         panel.accessoryView = serversDropDown
         panel.isAccessoryViewDisclosed = true
+        panel.allowedFileTypes = ["torrent"]
         
         panel.begin { (response) in
             
@@ -51,7 +52,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 
                 DispatchQueue.main.async {
                     
-                    let server = serversDropDown.selectedServer
+                    guard let server = serversDropDown.selectedServer else {
+                        
+                        return
+                    }
+                    
                     let torrent = Torrent(url: url)
                     torrent.send(to: server, completion: { (error) in
                         
@@ -74,7 +79,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
         
-        
+        if serversDropDown.selectedServer == nil {
+            
+            serversDropDown.addServer(serversDropDown.addServerButton)
+        }
     }
 }
 
