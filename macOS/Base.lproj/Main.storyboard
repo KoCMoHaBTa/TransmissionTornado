@@ -709,9 +709,14 @@ CA
                                         <action selector="delete:" target="Oky-zY-oP4" id="Yc7-Sp-bFz"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="E4F9CAD2-3E48-4A06-9C77-514FB0D52BD4" label="View Server" paletteLabel="View Server" tag="-1" image="NSInfo" id="AKn-pe-krQ">
+                                <toolbarItem implicitItemIdentifier="E4F9CAD2-3E48-4A06-9C77-514FB0D52BD4" label="View Server" paletteLabel="View Server" tag="-1" image="NSMobileMe" id="AKn-pe-krQ">
                                     <connections>
                                         <action selector="viewServer:" target="Oky-zY-oP4" id="Qq3-RP-UTN"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="6E24CBA7-81EF-4B70-B8D5-F8987F674007" label="Server Details" paletteLabel="Server Details" tag="-1" image="NSInfo" id="OD0-pm-OVW">
+                                    <connections>
+                                        <action selector="editServer:" target="Oky-zY-oP4" id="wXT-63-m51"/>
                                     </connections>
                                 </toolbarItem>
                             </allowedToolbarItems>
@@ -720,6 +725,7 @@ CA
                                 <toolbarItem reference="dJj-p2-duh"/>
                                 <toolbarItem reference="VNb-NC-Omx"/>
                                 <toolbarItem reference="AKn-pe-krQ"/>
+                                <toolbarItem reference="OD0-pm-OVW"/>
                             </defaultToolbarItems>
                         </toolbar>
                         <connections>
@@ -856,7 +862,7 @@ CA
                                                 </tableColumn>
                                             </tableColumns>
                                             <connections>
-                                                <action trigger="doubleAction" selector="viewServer:" target="XfG-lQ-9wD" id="Rf9-lp-k1o"/>
+                                                <action trigger="doubleAction" selector="editServer:" target="XfG-lQ-9wD" id="R8W-7b-ipw"/>
                                                 <outlet property="dataSource" destination="XfG-lQ-9wD" id="1wB-9U-UVe"/>
                                                 <outlet property="delegate" destination="XfG-lQ-9wD" id="GDx-KA-37g"/>
                                             </connections>
@@ -924,7 +930,7 @@ CA
         <!--Add Server-->
         <scene sceneID="ASJ-db-Fnh">
             <objects>
-                <viewController title="Add Server" id="sd2-0i-d4T" customClass="AddServerViewController" customModule="macOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Server" storyboardIdentifier="AddServerViewController" id="sd2-0i-d4T" customClass="AddServerViewController" customModule="macOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Oea-xE-kOe">
                         <rect key="frame" x="0.0" y="0.0" width="314" height="127"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1039,9 +1045,10 @@ Gw
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
         <image name="NSInfo" width="32" height="32"/>
+        <image name="NSMobileMe" width="32" height="32"/>
         <image name="NSRemoveTemplate" width="11" height="11"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lr0-c8-hKS"/>
+        <segue reference="cc1-YB-sdk"/>
     </inferredMetricsTieBreakers>
 </document>

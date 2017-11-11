@@ -122,11 +122,35 @@ class ServersViewController: NSViewController, NSTableViewDataSource, NSTableVie
         NSWorkspace.shared.open(url)
     }
     
+    @IBAction func editServer(_ sender: Any?) {
+        
+        let row = self.tableView.selectedRow
+        guard row >= 0 else {
+            
+            return
+        }
+        
+        let controller = self.storyboard?.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "AddServerViewController")) as! AddServerViewController
+        controller.server = self.servers[row]
+        controller.didSaveServer = { server in
+            
+            self.servers.remove(at: row)
+            self.servers.insert(server, at: row)
+            self.servers.save()
+            
+            self.tableView.reloadData()
+        }
+        
+        self.presentViewControllerAsSheet(controller)
+    }
+    
     //MARK: - NSUserInterfaceValidations
     
     func validateUserInterfaceItem(_ item: NSValidatedUserInterfaceItem) -> Bool {
         
-        if item.action == #selector(viewServer(_:)) || item.action == #selector(delete(_:)) {
+        if item.action == #selector(viewServer(_:))
+        || item.action == #selector(delete(_:))
+        || item.action == #selector(editServer(_:)) {
             
             return self.tableView.selectedRow >= 0
         }

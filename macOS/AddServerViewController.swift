@@ -15,6 +15,21 @@ class AddServerViewController: NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var serverAddressTextField: NSTextField!
     @IBOutlet weak var downloadDirTextField: NSTextField!
     
+    var server: Server?
+    var didSaveServer: ((Server) -> Void)? = { server in
+        
+        [Server].add(server)
+    }
+    
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        
+        self.nameTextField.stringValue = self.server?.name ?? ""
+        self.serverAddressTextField.stringValue = self.server?.address ?? ""
+        self.downloadDirTextField.stringValue = self.server?.downloadDir ?? ""
+    }
+    
     @IBAction func saveAction(_ sender: Any?) {
         
         let name = self.nameTextField.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -38,8 +53,7 @@ class AddServerViewController: NSViewController, NSTextFieldDelegate {
         }
         
         let server = Server(name: name, address: address, downloadDir: downloadDir)
-        [Server].add(server)
-        
+        self.didSaveServer?(server)
         self.view.window?.close()
     }
     

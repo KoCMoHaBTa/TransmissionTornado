@@ -43,6 +43,7 @@ class ServersViewController: UITableViewController {
             
             controller.didSaveServer = { [unowned self] server -> Void in
                 
+                [Server].add(server)
                 self.navigationController?.popToViewController(self, animated: true)
             }
         }
