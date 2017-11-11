@@ -50,6 +50,11 @@ extension Torrent {
             }
         }
         
+        struct ResponseData: Decodable {
+            
+            let result: String
+        }
+        
         do {
             
             let data = try Data(contentsOf: self.url)
@@ -82,13 +87,29 @@ extension Torrent {
                         return
                     }
                     
-                    guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+                    guard (response as? HTTPURLResponse)?.statusCode == 200, let data = data else {
                         
                         completion?(NSError(domain: NSURLErrorDomain, code: NSURLErrorUnknown, userInfo: nil))
                         return
                     }
                     
-                    completion?(nil)
+                    do {
+                       
+                        let responseData = try JSONDecoder().decode(ResponseData.self, from: data)
+                        
+                        guard responseData.result == "success" else {
+                            
+                            let error = NSError(domain: NSURLErrorDomain, code: NSURLErrorUnknown, userInfo: [NSLocalizedFailureReasonErrorKey: responseData.result])
+                            completion?(error)
+                            return
+                        }
+                        
+                        completion?(nil)
+                    }
+                    catch {
+                        
+                        completion?(error)
+                    }
                     
                 }).resume()
             }
