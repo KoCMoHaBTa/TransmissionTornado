@@ -22,6 +22,9 @@ class ServersSelectionViewController: NSViewController {
     }
     
     @IBOutlet weak var addServerButton: NSButton!
+    @IBOutlet weak var selectServerButton: NSButton!
+    
+    var didSelectServer: ((Server) -> Void)?
     
     lazy var servers = [Server].load()
     
@@ -34,6 +37,16 @@ class ServersSelectionViewController: NSViewController {
         }
         
         return self.servers[index]
+    }
+    
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        
+        if self.didSelectServer == nil {
+            
+            self.selectServerButton.isHidden = true
+        }
     }
     
     override func viewDidAppear() {
@@ -69,5 +82,16 @@ class ServersSelectionViewController: NSViewController {
         }
         
         self.presentViewControllerAsSheet(controller)
+    }
+    
+    @IBAction func selectServer(_ sender: Any?) {
+        
+        guard let server = self.selectedServer else {
+            
+            self.addServer(sender)
+            return
+        }
+        
+        self.didSelectServer?(server)
     }
 }

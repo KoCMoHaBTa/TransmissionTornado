@@ -1023,57 +1023,78 @@ Gw
             <objects>
                 <viewController storyboardIdentifier="ServersSelectionViewController" id="GBT-p9-8rc" customClass="ServersSelectionViewController" customModule="macOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="luI-f9-xZh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
+                        <rect key="frame" x="0.0" y="0.0" width="566" height="41"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="f9w-kl-KBg">
-                                <rect key="frame" x="10" y="10" width="300" height="21"/>
+                                <rect key="frame" x="133" y="10" width="300" height="21"/>
                                 <subviews>
-                                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a4y-G7-EJm">
-                                        <rect key="frame" x="86" y="-3" width="154" height="26"/>
-                                        <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Qae-2B-afw" id="p0I-hC-Gob">
-                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="menu"/>
-                                            <menu key="menu" id="RR2-9x-CIZ">
-                                                <items>
-                                                    <menuItem title="Item 1" state="on" id="Qae-2B-afw"/>
-                                                    <menuItem title="Item 2" id="TMw-UL-RIn"/>
-                                                    <menuItem title="Item 3" id="9wT-hf-GD2"/>
-                                                </items>
-                                            </menu>
-                                        </popUpButtonCell>
-                                    </popUpButton>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0cc-lI-rT2">
-                                        <rect key="frame" x="-2" y="0.0" width="86" height="21"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Select Server" id="Wau-Z5-anZ">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <button horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cJI-HT-8ZV">
-                                        <rect key="frame" x="241" y="-7" width="65" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2vB-og-Ofs">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="addServer:" target="GBT-p9-8rc" id="Tu9-DF-ZLT"/>
-                                        </connections>
-                                    </button>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1l9-7h-fqP">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="0cc-lI-rT2">
+                                                <rect key="frame" x="-2" y="4" width="86" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Select Server" id="Wau-Z5-anZ">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <popUpButton verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="a4y-G7-EJm">
+                                                <rect key="frame" x="88" y="-3" width="79" height="26"/>
+                                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Qae-2B-afw" id="p0I-hC-Gob">
+                                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="menu"/>
+                                                    <menu key="menu" id="RR2-9x-CIZ">
+                                                        <items>
+                                                            <menuItem title="Item 1" state="on" id="Qae-2B-afw"/>
+                                                            <menuItem title="Item 2" id="TMw-UL-RIn"/>
+                                                            <menuItem title="Item 3" id="9wT-hf-GD2"/>
+                                                        </items>
+                                                    </menu>
+                                                </popUpButtonCell>
+                                            </popUpButton>
+                                            <button horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cJI-HT-8ZV">
+                                                <rect key="frame" x="166" y="-7" width="65" height="32"/>
+                                                <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2vB-og-Ofs">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="addServer:" target="GBT-p9-8rc" id="Tu9-DF-ZLT"/>
+                                                </connections>
+                                            </button>
+                                            <button horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="OhW-Qc-tdp">
+                                                <rect key="frame" x="227" y="-7" width="79" height="32"/>
+                                                <buttonCell key="cell" type="push" title="Select" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5dI-xF-xIW">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="selectServer:" target="GBT-p9-8rc" id="4pj-Db-fXc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="cJI-HT-8ZV" secondAttribute="bottom" id="0i8-ib-SUd"/>
-                                    <constraint firstItem="a4y-G7-EJm" firstAttribute="top" secondItem="f9w-kl-KBg" secondAttribute="top" id="4Vg-Na-S8d"/>
-                                    <constraint firstItem="a4y-G7-EJm" firstAttribute="leading" secondItem="0cc-lI-rT2" secondAttribute="trailing" constant="6" id="I1f-Mh-VlS"/>
-                                    <constraint firstAttribute="bottom" secondItem="0cc-lI-rT2" secondAttribute="bottom" id="Nm9-Yc-U2N"/>
-                                    <constraint firstAttribute="bottom" secondItem="a4y-G7-EJm" secondAttribute="bottom" id="Q7b-wU-6Ny"/>
+                                    <constraint firstItem="1l9-7h-fqP" firstAttribute="leading" secondItem="f9w-kl-KBg" secondAttribute="leading" id="DLy-CL-Cy7"/>
                                     <constraint firstAttribute="width" constant="300" id="RaA-ke-fZp"/>
-                                    <constraint firstItem="0cc-lI-rT2" firstAttribute="leading" secondItem="f9w-kl-KBg" secondAttribute="leading" id="TvS-ad-Mra"/>
-                                    <constraint firstItem="0cc-lI-rT2" firstAttribute="top" secondItem="f9w-kl-KBg" secondAttribute="top" id="o6E-lv-0lD"/>
-                                    <constraint firstItem="cJI-HT-8ZV" firstAttribute="top" secondItem="f9w-kl-KBg" secondAttribute="top" id="rcc-hM-XbL"/>
-                                    <constraint firstItem="cJI-HT-8ZV" firstAttribute="leading" secondItem="a4y-G7-EJm" secondAttribute="trailing" constant="10" id="vBt-b3-TCW"/>
-                                    <constraint firstAttribute="trailing" secondItem="cJI-HT-8ZV" secondAttribute="trailing" id="xFr-ug-oZj"/>
+                                    <constraint firstItem="1l9-7h-fqP" firstAttribute="top" secondItem="f9w-kl-KBg" secondAttribute="top" id="Vh2-Eo-f54"/>
+                                    <constraint firstAttribute="trailing" secondItem="1l9-7h-fqP" secondAttribute="trailing" id="csS-pS-x5q"/>
+                                    <constraint firstAttribute="bottom" secondItem="1l9-7h-fqP" secondAttribute="bottom" id="m3K-72-Q1b"/>
                                 </constraints>
                             </customView>
                         </subviews>
@@ -1087,13 +1108,14 @@ Gw
                     </view>
                     <connections>
                         <outlet property="addServerButton" destination="cJI-HT-8ZV" id="lAU-bz-4en"/>
+                        <outlet property="selectServerButton" destination="OhW-Qc-tdp" id="lC8-lp-WY8"/>
                         <outlet property="serversDropDown" destination="a4y-G7-EJm" id="PAS-IO-6OC"/>
                         <outlet property="titleLabel" destination="0cc-lI-rT2" id="Jgx-jX-gJT"/>
                     </connections>
                 </viewController>
                 <customObject id="7a5-TR-l9a" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="1143"/>
+            <point key="canvasLocation" x="804" y="1142.5"/>
         </scene>
     </scenes>
     <resources>
