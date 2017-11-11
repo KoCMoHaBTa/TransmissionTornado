@@ -9,7 +9,7 @@
 import Foundation
 import Cocoa
 
-class ServersSelectionDropDown: NSView {
+class ServersSelectionViewController: NSViewController {
     
     @IBOutlet weak var titleLabel: NSTextField!
     @IBOutlet weak var serversDropDown: NSPopUpButton! {
@@ -36,17 +36,17 @@ class ServersSelectionDropDown: NSView {
         return self.servers[index]
     }
     
-    static var `default`: ServersSelectionDropDown {
-    
-        let nib = NSNib(nibNamed: NSNib.Name(rawValue: "ServersSelectionDropDown"), bundle: nil)
+    override func viewDidAppear() {
         
-        var objects: NSArray?
-        nib?.instantiate(withOwner: nil, topLevelObjects: &objects)
+        super.viewDidAppear()
         
-        return objects?.filter({ $0 is ServersSelectionDropDown }).first as! ServersSelectionDropDown
+        if self.selectedServer == nil {
+            
+            self.addServer(self.addServerButton)
+        }
     }
     
-    @IBAction func addServer(_ sender: NSButton) {
+    @IBAction func addServer(_ sender: Any?) {
         
         let controller = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "AddServerViewController")) as! AddServerViewController
         
@@ -58,9 +58,16 @@ class ServersSelectionDropDown: NSView {
             self.serversDropDown.selectItem(at: self.serversDropDown.itemTitles.count - 1)
         }
         
+        controller.dismissHandler = { controller, response in
+            
+            controller.dismiss(nil)
+            
+            if case .cancel = response, self.selectedServer == nil {
+                
+                self.view.window?.close()
+            }
+        }
         
-        let popover = NSPopover()
-        popover.contentViewController = controller
-        popover.show(relativeTo: sender.bounds, of: sender, preferredEdge: .maxX)
+        self.presentViewControllerAsSheet(controller)
     }
 }

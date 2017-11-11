@@ -21,10 +21,9 @@ class AddServerViewController: NSViewController, NSTextFieldDelegate {
         [Server].add(server)
     }
     
-    var dismissHandler: (AddServerViewController) -> Void = { controller in
+    var dismissHandler: (AddServerViewController, NSApplication.ModalResponse) -> Void = { controller, response in
         
-        NSApplication.shared.stopModal()
-        controller.view.window?.close()
+        controller.dismiss(nil)
     }
     
     override func viewDidLoad() {
@@ -60,12 +59,12 @@ class AddServerViewController: NSViewController, NSTextFieldDelegate {
         
         let server = Server(name: name, address: address, downloadDir: downloadDir)
         self.didSaveServer?(server)
-        self.dismissHandler(self)
+        self.dismissHandler(self, .OK)
     }
     
     @IBAction func cancelAction(_ sender: Any?) {
         
-        self.dismissHandler(self)
+        self.dismissHandler(self, .cancel)
     }
     
     //MARK: - NSTextFieldDelegate

@@ -40,9 +40,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func openTorrent(_ sender: Any?) {
         
-        let serversDropDown = ServersSelectionDropDown.default
+        let serversDropDown = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "ServersSelectionViewController")) as! ServersSelectionViewController
         let panel = NSOpenPanel()
-        panel.accessoryView = serversDropDown
+        panel.accessoryView = serversDropDown.view
         panel.isAccessoryViewDisclosed = true
         panel.allowedFileTypes = ["torrent"]
         
@@ -77,11 +77,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     })
                 }
             }
-        }
-        
-        if serversDropDown.selectedServer == nil {
-            
-            serversDropDown.addServer(serversDropDown.addServerButton)
         }
     }
 }
