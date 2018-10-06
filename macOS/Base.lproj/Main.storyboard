@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -689,7 +689,7 @@ CA
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="870" height="270"/>
@@ -799,7 +799,7 @@ CA
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn identifier="" width="251" minWidth="40" maxWidth="1000" id="jXP-FS-i4x">
+                                                <tableColumn width="251" minWidth="40" maxWidth="1000" id="jXP-FS-i4x">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Address">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -832,7 +832,7 @@ CA
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn identifier="" width="417" minWidth="10" maxWidth="3.4028234663852886e+38" id="aOb-pW-4Si">
+                                                <tableColumn width="417" minWidth="10" maxWidth="3.4028234663852886e+38" id="aOb-pW-4Si">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Download Directory">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -909,17 +909,17 @@ CA
             <objects>
                 <viewController title="Add Server" storyboardIdentifier="AddServerViewController" id="sd2-0i-d4T" customClass="AddServerViewController" customModule="macOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Oea-xE-kOe">
-                        <rect key="frame" x="0.0" y="0.0" width="314" height="127"/>
+                        <rect key="frame" x="0.0" y="0.0" width="314" height="187"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q6I-MX-1NS">
-                                <rect key="frame" x="8" y="8" width="298" height="111"/>
+                                <rect key="frame" x="8" y="8" width="298" height="171"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dv2-lc-cz7">
-                                        <rect key="frame" x="0.0" y="89" width="298" height="22"/>
+                                        <rect key="frame" x="0.0" y="149" width="298" height="22"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Name" drawsBackground="YES" id="zpv-MO-Ru9">
                                             <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                         <connections>
@@ -927,10 +927,10 @@ CA
                                         </connections>
                                     </textField>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="be8-sy-XCL">
-                                        <rect key="frame" x="0.0" y="59" width="298" height="22"/>
+                                        <rect key="frame" x="0.0" y="119" width="298" height="22"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Server Address" drawsBackground="YES" id="SBm-Qv-bvV">
                                             <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                         <connections>
@@ -938,14 +938,36 @@ CA
                                         </connections>
                                     </textField>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EHk-AJ-JIO">
-                                        <rect key="frame" x="0.0" y="29" width="298" height="22"/>
+                                        <rect key="frame" x="0.0" y="89" width="298" height="22"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Download Directory" drawsBackground="YES" id="4kF-KM-h1A">
                                             <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                         <connections>
                                             <outlet property="delegate" destination="sd2-0i-d4T" id="RC9-X2-ccS"/>
+                                        </connections>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dwo-Cs-XZq">
+                                        <rect key="frame" x="0.0" y="59" width="298" height="22"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Account" drawsBackground="YES" id="WfI-Ey-vSq">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <outlet property="delegate" destination="sd2-0i-d4T" id="QeB-zG-G6O"/>
+                                        </connections>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EbD-aP-VBx" customClass="NSSecureTextField">
+                                        <rect key="frame" x="0.0" y="29" width="298" height="22"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" id="Kqt-kg-umb" customClass="NSSecureTextFieldCell">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <outlet property="delegate" destination="sd2-0i-d4T" id="l2Y-bj-Rl1"/>
                                         </connections>
                                     </textField>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="YXn-r2-YIf">
@@ -992,8 +1014,12 @@ Gw
                                     <integer value="1000"/>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
@@ -1009,8 +1035,10 @@ Gw
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="accountTextField" destination="dwo-Cs-XZq" id="S2j-Nw-dVP"/>
                         <outlet property="downloadDirTextField" destination="EHk-AJ-JIO" id="KFl-fU-RlP"/>
                         <outlet property="nameTextField" destination="Dv2-lc-cz7" id="hc8-kC-fpK"/>
+                        <outlet property="passwordTextField" destination="EbD-aP-VBx" id="m7M-n9-8bv"/>
                         <outlet property="serverAddressTextField" destination="be8-sy-XCL" id="Z0y-Oe-Nms"/>
                     </connections>
                 </viewController>
@@ -1041,7 +1069,7 @@ Gw
                                                 </textFieldCell>
                                             </textField>
                                             <popUpButton verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="a4y-G7-EJm">
-                                                <rect key="frame" x="88" y="-3" width="79" height="26"/>
+                                                <rect key="frame" x="88" y="-3" width="79" height="25"/>
                                                 <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Qae-2B-afw" id="p0I-hC-Gob">
                                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="menu"/>
@@ -1120,12 +1148,12 @@ Gw
     </scenes>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
-        <image name="NSFolder" width="32" height="32"/>
-        <image name="NSInfo" width="32" height="32"/>
-        <image name="NSMobileMe" width="32" height="32"/>
+        <image name="NSFolder" width="128" height="128"/>
+        <image name="NSInfo" width="128" height="128"/>
+        <image name="NSMobileMe" width="128" height="128"/>
         <image name="NSRemoveTemplate" width="11" height="11"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cc1-YB-sdk"/>
+        <segue reference="lr0-c8-hKS"/>
     </inferredMetricsTieBreakers>
 </document>
