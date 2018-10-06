@@ -12,11 +12,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="macOS" id="1Xt-HY-uBw">
+                            <menuItem title="TransmissionTornado" id="1Xt-HY-uBw" userLabel="TransmissionTornado">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="macOS" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="TransmissionTornado" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About macOS" id="5kV-Vb-QxS">
+                                        <menuItem title="About TransmissionTornado" id="5kV-Vb-QxS" userLabel="About TransmissionTornado">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -30,7 +30,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide macOS" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide TransmissionTornado" keyEquivalent="h" id="Olw-nP-bQN" userLabel="Hide TransmissionTornado">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -48,7 +48,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit macOS" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit TransmissionTornado" keyEquivalent="q" id="4sb-4s-VLi" userLabel="Quit TransmissionTornado">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -665,7 +665,7 @@ CA
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="macOS Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="TransmissionTornado Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -679,7 +679,7 @@ CA
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="macOS" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="TransmissionTornado" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -689,7 +689,7 @@ CA
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Transmission RPC Servers" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="870" height="270"/>
@@ -748,7 +748,7 @@ CA
         <!--Servers View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController storyboardIdentifier="ServersViewController" id="XfG-lQ-9wD" customClass="ServersViewController" customModule="macOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ServersViewController" id="XfG-lQ-9wD" customClass="ServersViewController" customModule="TransmissionTornado" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="795" height="374"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -907,7 +907,7 @@ CA
         <!--Add Server-->
         <scene sceneID="ASJ-db-Fnh">
             <objects>
-                <viewController title="Add Server" storyboardIdentifier="AddServerViewController" id="sd2-0i-d4T" customClass="AddServerViewController" customModule="macOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Server" storyboardIdentifier="AddServerViewController" id="sd2-0i-d4T" customClass="AddServerViewController" customModule="TransmissionTornado" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Oea-xE-kOe">
                         <rect key="frame" x="0.0" y="0.0" width="314" height="187"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1049,7 +1049,7 @@ Gw
         <!--Servers Selection View Controller-->
         <scene sceneID="MJk-tJ-YeW">
             <objects>
-                <viewController storyboardIdentifier="ServersSelectionViewController" id="GBT-p9-8rc" customClass="ServersSelectionViewController" customModule="macOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ServersSelectionViewController" id="GBT-p9-8rc" customClass="ServersSelectionViewController" customModule="TransmissionTornado" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="luI-f9-xZh">
                         <rect key="frame" x="0.0" y="0.0" width="566" height="41"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1154,6 +1154,6 @@ Gw
         <image name="NSRemoveTemplate" width="11" height="11"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lr0-c8-hKS"/>
+        <segue reference="cc1-YB-sdk"/>
     </inferredMetricsTieBreakers>
 </document>
