@@ -178,6 +178,7 @@
 				TargetAttributes = {
 					E65A1E701F93A0AB00762BB4 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
 					E6FBD07A1FB1076E00226930 = {
@@ -408,7 +409,7 @@
 				PRODUCT_NAME = TransmissionTornado;
 				PROVISIONING_PROFILE = "34e6d5cd-a19b-4bab-ae30-0a23cdea937e";
 				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Development Provisioning Profile";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -425,7 +426,7 @@
 				PRODUCT_NAME = TransmissionTornado;
 				PROVISIONING_PROFILE = "34e6d5cd-a19b-4bab-ae30-0a23cdea937e";
 				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Development Provisioning Profile";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
