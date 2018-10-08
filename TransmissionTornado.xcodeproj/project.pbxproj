@@ -20,6 +20,8 @@
 		E65A1E911F93F88B00762BB4 /* Torrent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A1E901F93F88B00762BB4 /* Torrent.swift */; };
 		E6CD969B216B9FCD00446B9B /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD969A216B9FCD00446B9B /* Credentials.swift */; };
 		E6CD969C216B9FCD00446B9B /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD969A216B9FCD00446B9B /* Credentials.swift */; };
+		E6CD96B2216BAB7500446B9B /* iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD96B1216BAB7500446B9B /* iOSTests.swift */; };
+		E6CD96C0216BABA400446B9B /* macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD96BF216BABA400446B9B /* macOSTests.swift */; };
 		E6FBD07E1FB1076E00226930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FBD07D1FB1076E00226930 /* AppDelegate.swift */; };
 		E6FBD0801FB1076E00226930 /* ServersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FBD07F1FB1076E00226930 /* ServersViewController.swift */; };
 		E6FBD0851FB1076E00226930 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6FBD0831FB1076E00226930 /* Main.storyboard */; };
@@ -27,6 +29,23 @@
 		E6FBD08D1FB107F600226930 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A1E8E1F93F2B400762BB4 /* Server.swift */; };
 		E6FBD08E1FB1082000226930 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65A1E7B1F93A0AB00762BB4 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E6CD96B4216BAB7500446B9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E65A1E691F93A0AB00762BB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E65A1E701F93A0AB00762BB4;
+			remoteInfo = iOS;
+		};
+		E6CD96C2216BABA400446B9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E65A1E691F93A0AB00762BB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6FBD07A1FB1076E00226930;
+			remoteInfo = macOS;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E6039F7C1FB76D2C00DC035A /* ServersSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersSelectionViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +62,12 @@
 		E65A1E8E1F93F2B400762BB4 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		E65A1E901F93F88B00762BB4 /* Torrent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Torrent.swift; sourceTree = "<group>"; };
 		E6CD969A216B9FCD00446B9B /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		E6CD96AF216BAB7500446B9B /* iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6CD96B1216BAB7500446B9B /* iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTests.swift; sourceTree = "<group>"; };
+		E6CD96B3216BAB7500446B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6CD96BD216BABA400446B9B /* macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = macOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6CD96BF216BABA400446B9B /* macOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSTests.swift; sourceTree = "<group>"; };
+		E6CD96C1216BABA400446B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6FBD0761FB106FC00226930 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		E6FBD07B1FB1076E00226930 /* TransmissionTornado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransmissionTornado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6FBD07D1FB1076E00226930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +79,20 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		E65A1E6E1F93A0AB00762BB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6CD96AC216BAB7500446B9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6CD96BA216BABA400446B9B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -77,6 +116,8 @@
 				E6FBD08B1FB107EB00226930 /* Shared */,
 				E65A1E731F93A0AB00762BB4 /* iOS */,
 				E6FBD07C1FB1076E00226930 /* macOS */,
+				E6CD96B0216BAB7500446B9B /* iOSTests */,
+				E6CD96BE216BABA400446B9B /* macOSTests */,
 				E65A1E721F93A0AB00762BB4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,6 +127,8 @@
 			children = (
 				E65A1E711F93A0AB00762BB4 /* TransmissionTornado.app */,
 				E6FBD07B1FB1076E00226930 /* TransmissionTornado.app */,
+				E6CD96AF216BAB7500446B9B /* iOSTests.xctest */,
+				E6CD96BD216BABA400446B9B /* macOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +145,24 @@
 				E65A1E801F93A0AB00762BB4 /* Info.plist */,
 			);
 			path = iOS;
+			sourceTree = "<group>";
+		};
+		E6CD96B0216BAB7500446B9B /* iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				E6CD96B1216BAB7500446B9B /* iOSTests.swift */,
+				E6CD96B3216BAB7500446B9B /* Info.plist */,
+			);
+			path = iOSTests;
+			sourceTree = "<group>";
+		};
+		E6CD96BE216BABA400446B9B /* macOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				E6CD96BF216BABA400446B9B /* macOSTests.swift */,
+				E6CD96C1216BABA400446B9B /* Info.plist */,
+			);
+			path = macOSTests;
 			sourceTree = "<group>";
 		};
 		E6FBD07C1FB1076E00226930 /* macOS */ = {
@@ -149,6 +210,42 @@
 			productReference = E65A1E711F93A0AB00762BB4 /* TransmissionTornado.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E6CD96AE216BAB7500446B9B /* iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6CD96B6216BAB7500446B9B /* Build configuration list for PBXNativeTarget "iOSTests" */;
+			buildPhases = (
+				E6CD96AB216BAB7500446B9B /* Sources */,
+				E6CD96AC216BAB7500446B9B /* Frameworks */,
+				E6CD96AD216BAB7500446B9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6CD96B5216BAB7500446B9B /* PBXTargetDependency */,
+			);
+			name = iOSTests;
+			productName = iOSTests;
+			productReference = E6CD96AF216BAB7500446B9B /* iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E6CD96BC216BABA400446B9B /* macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6CD96C6216BABA500446B9B /* Build configuration list for PBXNativeTarget "macOSTests" */;
+			buildPhases = (
+				E6CD96B9216BABA400446B9B /* Sources */,
+				E6CD96BA216BABA400446B9B /* Frameworks */,
+				E6CD96BB216BABA400446B9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6CD96C3216BABA400446B9B /* PBXTargetDependency */,
+			);
+			name = macOSTests;
+			productName = macOSTests;
+			productReference = E6CD96BD216BABA400446B9B /* macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E6FBD07A1FB1076E00226930 /* macOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6FBD0881FB1076E00226930 /* Build configuration list for PBXNativeTarget "macOS" */;
@@ -172,7 +269,7 @@
 		E65A1E691F93A0AB00762BB4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = KoCMoHaBTa;
 				TargetAttributes = {
@@ -180,6 +277,16 @@
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
+					};
+					E6CD96AE216BAB7500446B9B = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E65A1E701F93A0AB00762BB4;
+					};
+					E6CD96BC216BABA400446B9B = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E6FBD07A1FB1076E00226930;
 					};
 					E6FBD07A1FB1076E00226930 = {
 						CreatedOnToolsVersion = 9.1;
@@ -203,6 +310,8 @@
 			targets = (
 				E65A1E701F93A0AB00762BB4 /* iOS */,
 				E6FBD07A1FB1076E00226930 /* macOS */,
+				E6CD96AE216BAB7500446B9B /* iOSTests */,
+				E6CD96BC216BABA400446B9B /* macOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -215,6 +324,20 @@
 				E65A1E7F1F93A0AB00762BB4 /* LaunchScreen.storyboard in Resources */,
 				E65A1E7C1F93A0AB00762BB4 /* Assets.xcassets in Resources */,
 				E65A1E7A1F93A0AB00762BB4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6CD96AD216BAB7500446B9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6CD96BB216BABA400446B9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +367,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E6CD96AB216BAB7500446B9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6CD96B2216BAB7500446B9B /* iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6CD96B9216BABA400446B9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6CD96C0216BABA400446B9B /* macOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E6FBD0771FB1076E00226930 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,6 +398,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6CD96B5216BAB7500446B9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E65A1E701F93A0AB00762BB4 /* iOS */;
+			targetProxy = E6CD96B4216BAB7500446B9B /* PBXContainerItemProxy */;
+		};
+		E6CD96C3216BABA400446B9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6FBD07A1FB1076E00226930 /* macOS */;
+			targetProxy = E6CD96C2216BABA400446B9B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E65A1E781F93A0AB00762BB4 /* Main.storyboard */ = {
@@ -435,6 +587,84 @@
 			};
 			name = Release;
 		};
+		E6CD96B7216BAB7500446B9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.TransmissionTornado.iOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransmissionTornado.app/TransmissionTornado";
+			};
+			name = Debug;
+		};
+		E6CD96B8216BAB7500446B9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.TransmissionTornado.iOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransmissionTornado.app/TransmissionTornado";
+			};
+			name = Release;
+		};
+		E6CD96C4216BABA500446B9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = macOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.TransmissionTornado.macOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransmissionTornado.app/Contents/MacOS/TransmissionTornado";
+			};
+			name = Debug;
+		};
+		E6CD96C5216BABA500446B9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = macOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.TransmissionTornado.macOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransmissionTornado.app/Contents/MacOS/TransmissionTornado";
+			};
+			name = Release;
+		};
 		E6FBD0891FB1076E00226930 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -488,6 +718,24 @@
 			buildConfigurations = (
 				E65A1E841F93A0AB00762BB4 /* Debug */,
 				E65A1E851F93A0AB00762BB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6CD96B6216BAB7500446B9B /* Build configuration list for PBXNativeTarget "iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6CD96B7216BAB7500446B9B /* Debug */,
+				E6CD96B8216BAB7500446B9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6CD96C6216BABA500446B9B /* Build configuration list for PBXNativeTarget "macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6CD96C4216BABA500446B9B /* Debug */,
+				E6CD96C5216BABA500446B9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
