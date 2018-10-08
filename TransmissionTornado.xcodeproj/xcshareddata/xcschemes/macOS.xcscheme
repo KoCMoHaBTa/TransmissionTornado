@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E6FBD07A1FB1076E00226930"
-               BuildableName = "TransmissionTornado.app"
-               BlueprintName = "TransmissionTornado"
+               BuildableName = "macOS.app"
+               BlueprintName = "macOS"
                ReferencedContainer = "container:TransmissionTornado.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E6FBD07A1FB1076E00226930"
-            BuildableName = "TransmissionTornado.app"
-            BlueprintName = "TransmissionTornado"
+            BuildableName = "macOS.app"
+            BlueprintName = "macOS"
             ReferencedContainer = "container:TransmissionTornado.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E6FBD07A1FB1076E00226930"
-            BuildableName = "TransmissionTornado.app"
-            BlueprintName = "TransmissionTornado"
+            BuildableName = "macOS.app"
+            BlueprintName = "macOS"
             ReferencedContainer = "container:TransmissionTornado.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E6FBD07A1FB1076E00226930"
-            BuildableName = "TransmissionTornado.app"
-            BlueprintName = "TransmissionTornado"
+            BuildableName = "macOS.app"
+            BlueprintName = "macOS"
             ReferencedContainer = "container:TransmissionTornado.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
