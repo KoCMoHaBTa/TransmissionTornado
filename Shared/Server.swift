@@ -13,8 +13,7 @@ struct Server: Codable {
     let name: String
     let address: String
     let downloadDir: String?
-    let account: String?
-    let password: String?
+    let credentials: Credentials?
 }
 
 extension Array where Element == Server {

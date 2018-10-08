@@ -18,6 +18,8 @@
 		E65A1E8D1F93B4AF00762BB4 /* AddServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A1E8C1F93B4AF00762BB4 /* AddServerViewController.swift */; };
 		E65A1E8F1F93F2B400762BB4 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A1E8E1F93F2B400762BB4 /* Server.swift */; };
 		E65A1E911F93F88B00762BB4 /* Torrent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A1E901F93F88B00762BB4 /* Torrent.swift */; };
+		E6CD969B216B9FCD00446B9B /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD969A216B9FCD00446B9B /* Credentials.swift */; };
+		E6CD969C216B9FCD00446B9B /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD969A216B9FCD00446B9B /* Credentials.swift */; };
 		E6FBD07E1FB1076E00226930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FBD07D1FB1076E00226930 /* AppDelegate.swift */; };
 		E6FBD0801FB1076E00226930 /* ServersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FBD07F1FB1076E00226930 /* ServersViewController.swift */; };
 		E6FBD0851FB1076E00226930 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6FBD0831FB1076E00226930 /* Main.storyboard */; };
@@ -40,6 +42,7 @@
 		E65A1E8C1F93B4AF00762BB4 /* AddServerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServerViewController.swift; sourceTree = "<group>"; };
 		E65A1E8E1F93F2B400762BB4 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		E65A1E901F93F88B00762BB4 /* Torrent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Torrent.swift; sourceTree = "<group>"; };
+		E6CD969A216B9FCD00446B9B /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		E6FBD0761FB106FC00226930 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		E6FBD07B1FB1076E00226930 /* TransmissionTornado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransmissionTornado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6FBD07D1FB1076E00226930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +123,7 @@
 			children = (
 				E65A1E901F93F88B00762BB4 /* Torrent.swift */,
 				E65A1E8E1F93F2B400762BB4 /* Server.swift */,
+				E6CD969A216B9FCD00446B9B /* Credentials.swift */,
 				E65A1E7B1F93A0AB00762BB4 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -231,6 +235,7 @@
 				E65A1E8F1F93F2B400762BB4 /* Server.swift in Sources */,
 				E65A1E8B1F93B23300762BB4 /* ServersViewController.swift in Sources */,
 				E65A1E911F93F88B00762BB4 /* Torrent.swift in Sources */,
+				E6CD969B216B9FCD00446B9B /* Credentials.swift in Sources */,
 				E65A1E751F93A0AB00762BB4 /* AppDelegate.swift in Sources */,
 				E65A1E891F93B22700762BB4 /* TorrentsViewController.swift in Sources */,
 				E65A1E8D1F93B4AF00762BB4 /* AddServerViewController.swift in Sources */,
@@ -244,6 +249,7 @@
 				E6FBD0801FB1076E00226930 /* ServersViewController.swift in Sources */,
 				E657DCD11FB267BA009FED71 /* AddServerViewController.swift in Sources */,
 				E6039F7D1FB76D2C00DC035A /* ServersSelectionViewController.swift in Sources */,
+				E6CD969C216B9FCD00446B9B /* Credentials.swift in Sources */,
 				E6FBD07E1FB1076E00226930 /* AppDelegate.swift in Sources */,
 				E6FBD08D1FB107F600226930 /* Server.swift in Sources */,
 				E6FBD08C1FB107F500226930 /* Torrent.swift in Sources */,

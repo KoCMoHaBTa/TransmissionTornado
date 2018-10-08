@@ -35,8 +35,8 @@ class AddServerViewController: NSViewController, NSTextFieldDelegate {
         self.nameTextField.stringValue = self.server?.name ?? ""
         self.serverAddressTextField.stringValue = self.server?.address ?? ""
         self.downloadDirTextField.stringValue = self.server?.downloadDir ?? ""
-        self.accountTextField.stringValue = self.server?.account ?? ""
-        self.passwordTextField.stringValue = self.server?.password ?? ""
+        self.accountTextField.stringValue = self.server?.credentials?.account ?? ""
+        self.passwordTextField.stringValue = self.server?.credentials?.password ?? ""
     }
     
     @IBAction func saveAction(_ sender: Any?) {
@@ -71,7 +71,13 @@ class AddServerViewController: NSViewController, NSTextFieldDelegate {
             password = self.passwordTextField.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
         }
         
-        let server = Server(name: name, address: address, downloadDir: downloadDir, account: account, password:password)
+        var credentials: Credentials? = nil
+        if let account = account, let password = password {
+            
+            credentials = Credentials(account: account, password: password)
+        }
+        
+        let server = Server(name: name, address: address, downloadDir: downloadDir, credentials: credentials)
         self.didSaveServer?(server)
         self.dismissHandler(self, .OK)
     }
