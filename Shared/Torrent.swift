@@ -69,6 +69,16 @@ extension Torrent {
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
             request.httpBody = try JSONEncoder().encode(requestData)
+
+            if (nil != server.account) {
+                var password: String = ""
+                if (nil != server.password) {
+                    password = server.password!;
+                }
+                let authStringToEncodeBase64: String = server.account! + ":" + password;
+                let authData: Data = authStringToEncodeBase64.data(using: String.Encoding.utf8)!
+                request.addValue("Basic " + authData.base64EncodedString(), forHTTPHeaderField: "Authorization")
+            }
             
             func performRequest() {
                 

@@ -41,7 +41,7 @@
 		E65A1E8E1F93F2B400762BB4 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		E65A1E901F93F88B00762BB4 /* Torrent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Torrent.swift; sourceTree = "<group>"; };
 		E6FBD0761FB106FC00226930 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		E6FBD07B1FB1076E00226930 /* macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6FBD07B1FB1076E00226930 /* TransmissionTornado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransmissionTornado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6FBD07D1FB1076E00226930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6FBD07F1FB1076E00226930 /* ServersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewController.swift; sourceTree = "<group>"; };
 		E6FBD0841FB1076E00226930 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				E65A1E711F93A0AB00762BB4 /* iOS.app */,
-				E6FBD07B1FB1076E00226930 /* macOS.app */,
+				E6FBD07B1FB1076E00226930 /* TransmissionTornado.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,9 +145,9 @@
 			productReference = E65A1E711F93A0AB00762BB4 /* iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E6FBD07A1FB1076E00226930 /* macOS */ = {
+		E6FBD07A1FB1076E00226930 /* TransmissionTornado */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E6FBD0881FB1076E00226930 /* Build configuration list for PBXNativeTarget "macOS" */;
+			buildConfigurationList = E6FBD0881FB1076E00226930 /* Build configuration list for PBXNativeTarget "TransmissionTornado" */;
 			buildPhases = (
 				E6FBD0771FB1076E00226930 /* Sources */,
 				E6FBD0781FB1076E00226930 /* Frameworks */,
@@ -157,9 +157,9 @@
 			);
 			dependencies = (
 			);
-			name = macOS;
+			name = TransmissionTornado;
 			productName = macOS;
-			productReference = E6FBD07B1FB1076E00226930 /* macOS.app */;
+			productReference = E6FBD07B1FB1076E00226930 /* TransmissionTornado.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -196,7 +196,7 @@
 			projectRoot = "";
 			targets = (
 				E65A1E701F93A0AB00762BB4 /* iOS */,
-				E6FBD07A1FB1076E00226930 /* macOS */,
+				E6FBD07A1FB1076E00226930 /* TransmissionTornado */,
 			);
 		};
 /* End PBXProject section */
@@ -480,7 +480,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E6FBD0881FB1076E00226930 /* Build configuration list for PBXNativeTarget "macOS" */ = {
+		E6FBD0881FB1076E00226930 /* Build configuration list for PBXNativeTarget "TransmissionTornado" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E6FBD0891FB1076E00226930 /* Debug */,
