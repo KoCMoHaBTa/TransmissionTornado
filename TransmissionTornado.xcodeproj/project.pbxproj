@@ -412,7 +412,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.TransmissionTornado.iOS;
 				PRODUCT_NAME = TransmissionTornado;
 				PROVISIONING_PROFILE = "34e6d5cd-a19b-4bab-ae30-0a23cdea937e";
-				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Development Provisioning Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Wildcard Development";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -429,7 +429,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.TransmissionTornado.iOS;
 				PRODUCT_NAME = TransmissionTornado;
 				PROVISIONING_PROFILE = "34e6d5cd-a19b-4bab-ae30-0a23cdea937e";
-				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Development Provisioning Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Wildcard Development";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
