@@ -34,7 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func application(_ sender: NSApplication, openFile filename: String) -> Bool {
         
-        let serversDropDown = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "ServersSelectionViewController")) as! ServersSelectionViewController
+        let serversDropDown = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "ServersSelectionViewController") as! ServersSelectionViewController
         
         var window: NSWindow! =  nil
         serversDropDown.didSelectServer = { server in
@@ -71,7 +71,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func openTorrent(_ sender: Any?) {
         
-        let serversDropDown = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "ServersSelectionViewController")) as! ServersSelectionViewController
+        let serversDropDown = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "ServersSelectionViewController") as! ServersSelectionViewController
         let panel = NSOpenPanel()
         panel.accessoryView = serversDropDown.view
         panel.isAccessoryViewDisclosed = true

@@ -140,7 +140,7 @@ class ServersViewController: NSViewController, NSTableViewDataSource, NSTableVie
             return
         }
         
-        let controller = self.storyboard?.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "AddServerViewController")) as! AddServerViewController
+        let controller = self.storyboard?.instantiateController(withIdentifier: "AddServerViewController") as! AddServerViewController
         controller.server = self.servers[row]
         controller.didSaveServer = { server in
             
@@ -151,7 +151,7 @@ class ServersViewController: NSViewController, NSTableViewDataSource, NSTableVie
             self.tableView.reloadData()
         }
         
-        self.presentViewControllerAsSheet(controller)
+        self.presentAsSheet(controller)
     }
     
     //MARK: - NSUserInterfaceValidations

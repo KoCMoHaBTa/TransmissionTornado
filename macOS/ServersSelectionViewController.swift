@@ -61,7 +61,7 @@ class ServersSelectionViewController: NSViewController {
     
     @IBAction func addServer(_ sender: Any?) {
         
-        let controller = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "AddServerViewController")) as! AddServerViewController
+        let controller = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "AddServerViewController") as! AddServerViewController
         
         controller.didSaveServer = { server in
             
@@ -81,7 +81,7 @@ class ServersSelectionViewController: NSViewController {
             }
         }
         
-        self.presentViewControllerAsSheet(controller)
+        self.presentAsSheet(controller)
     }
     
     @IBAction func selectServer(_ sender: Any?) {
