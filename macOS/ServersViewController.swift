@@ -79,6 +79,16 @@ class ServersViewController: NSViewController, NSTableViewDataSource, NSTableVie
                 
                 cell.textField?.stringValue = server.downloadDir ?? "--"
             }
+            
+            if columnIndex == 3 {
+                
+                cell.textField?.stringValue = server.credentials?.account ?? "--"
+            }
+            
+            if columnIndex == 4 {
+                
+                cell.textField?.stringValue = server.credentials?.password ?? "--"
+            }
         }
         
         return cell

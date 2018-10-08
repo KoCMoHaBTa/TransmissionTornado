@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5WZ-oL-Cfa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5WZ-oL-Cfa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Torrents-->
         <scene sceneID="ybI-3d-Slj">
             <objects>
-                <tableViewController id="Myw-ZX-pyR" customClass="TorrentsViewController" customModule="TransmissionTorrentUploader" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Myw-ZX-pyR" customClass="TorrentsViewController" customModule="TransmissionTornado" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4lx-Ga-hrt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yff-9s-Xzv">
-                                            <rect key="frame" x="16" y="0.0" width="344" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -91,7 +91,7 @@
         <!--Servers-->
         <scene sceneID="qw1-Dj-0Ba">
             <objects>
-                <tableViewController storyboardIdentifier="ServersViewController" id="F7k-jk-VrR" customClass="ServersViewController" customModule="TransmissionTorrentUploader" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ServersViewController" id="F7k-jk-VrR" customClass="ServersViewController" customModule="TransmissionTornado" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uSR-dd-ANX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +101,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LcK-1s-NRx" id="ann-T1-miV">
-                                    <rect key="frame" x="0.0" y="0.0" width="308" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="307" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oW8-5Z-I9T">
@@ -145,7 +145,7 @@
         <!--Add Server-->
         <scene sceneID="W1p-OT-nQ6">
             <objects>
-                <tableViewController id="IdT-Sl-2v4" customClass="AddServerViewController" customModule="TransmissionTorrentUploader" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="IdT-Sl-2v4" customClass="AddServerViewController" customModule="TransmissionTornado" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SuQ-ID-RzR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,7 +161,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CKW-7H-Frm">
-                                                    <rect key="frame" x="8" y="6" width="359" height="30"/>
+                                                    <rect key="frame" x="16" y="7" width="343" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -182,7 +182,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Server URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LGJ-Dt-G5N">
-                                                    <rect key="frame" x="8" y="6" width="359" height="30"/>
+                                                    <rect key="frame" x="16" y="7" width="343" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="URL" textContentType="url"/>
@@ -202,8 +202,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Download Dir" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vgl-oz-c4v">
-                                                    <rect key="frame" x="8" y="6" width="359" height="30"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Download Dir (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vgl-oz-c4v">
+                                                    <rect key="frame" x="16" y="7" width="343" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="URL" textContentType="url"/>
@@ -213,6 +213,48 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="Vgl-oz-c4v" secondAttribute="trailing" id="0cV-GW-YlZ"/>
                                                 <constraint firstItem="Vgl-oz-c4v" firstAttribute="centerY" secondItem="n8v-V2-vRv" secondAttribute="centerY" id="t2d-Op-5oB"/>
                                                 <constraint firstItem="Vgl-oz-c4v" firstAttribute="leading" secondItem="n8v-V2-vRv" secondAttribute="leadingMargin" id="wgu-cO-VWn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aOK-r2-aUD">
+                                        <rect key="frame" x="0.0" y="132" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aOK-r2-aUD" id="leq-aE-lm0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Account (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zYk-p9-Zr2">
+                                                    <rect key="frame" x="16" y="7" width="343" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="URL" textContentType="url"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zYk-p9-Zr2" firstAttribute="centerY" secondItem="leq-aE-lm0" secondAttribute="centerY" id="avR-zk-VCj"/>
+                                                <constraint firstItem="zYk-p9-Zr2" firstAttribute="leading" secondItem="leq-aE-lm0" secondAttribute="leadingMargin" id="hWx-wM-z2x"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zYk-p9-Zr2" secondAttribute="trailing" id="rcn-Xc-n4b"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hZV-Vd-SQs">
+                                        <rect key="frame" x="0.0" y="176" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hZV-Vd-SQs" id="N5z-yI-ODw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Xl-Mn-C0g">
+                                                    <rect key="frame" x="16" y="7" width="343" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="URL" textContentType="url"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6Xl-Mn-C0g" firstAttribute="centerY" secondItem="N5z-yI-ODw" secondAttribute="centerY" id="8nQ-ap-Bfj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6Xl-Mn-C0g" secondAttribute="trailing" id="ScW-La-GSp"/>
+                                                <constraint firstItem="6Xl-Mn-C0g" firstAttribute="leading" secondItem="N5z-yI-ODw" secondAttribute="leadingMargin" id="gim-Yu-4t4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -232,8 +274,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="accountTextField" destination="zYk-p9-Zr2" id="dC3-re-cKU"/>
                         <outlet property="downloadDirTextField" destination="Vgl-oz-c4v" id="Uwg-uq-dYd"/>
                         <outlet property="nameTextField" destination="CKW-7H-Frm" id="oMU-Er-EmA"/>
+                        <outlet property="passwordTextField" destination="6Xl-Mn-C0g" id="ghl-iE-lOE"/>
                         <outlet property="serverAddressTextField" destination="LGJ-Dt-G5N" id="rmz-vt-ONN"/>
                     </connections>
                 </tableViewController>
@@ -260,8 +304,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="downloads_icon" width="25" height="25"/>
-        <image name="servers_icon" width="25" height="25"/>
+        <image name="downloads_icon" width="1.25" height="1.25"/>
+        <image name="servers_icon" width="37.5" height="37.5"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tZ3-uf-MEH"/>

@@ -783,9 +783,8 @@ CA
                                                             <rect key="frame" x="1" y="1" width="116" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xB0-N1-82O">
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="xB0-N1-82O">
                                                                     <rect key="frame" x="0.0" y="0.0" width="116" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="vTh-kw-VSO">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -793,6 +792,12 @@ CA
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="xB0-N1-82O" secondAttribute="bottom" id="6BS-7a-hBE"/>
+                                                                <constraint firstItem="xB0-N1-82O" firstAttribute="top" secondItem="OIC-Eh-7Z2" secondAttribute="top" id="8G6-lf-Nmj"/>
+                                                                <constraint firstAttribute="trailing" secondItem="xB0-N1-82O" secondAttribute="trailing" constant="2" id="PqJ-Ow-bK3"/>
+                                                                <constraint firstItem="xB0-N1-82O" firstAttribute="leading" secondItem="OIC-Eh-7Z2" secondAttribute="leading" constant="2" id="qpR-FS-Rgi"/>
+                                                            </constraints>
                                                             <connections>
                                                                 <outlet property="textField" destination="xB0-N1-82O" id="4qZ-YQ-Ecv"/>
                                                             </connections>
@@ -816,9 +821,8 @@ CA
                                                             <rect key="frame" x="120" y="1" width="251" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xJS-cf-MZB">
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="xJS-cf-MZB">
                                                                     <rect key="frame" x="0.0" y="0.0" width="251" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="2Lc-se-G9D">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -826,6 +830,12 @@ CA
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="xJS-cf-MZB" firstAttribute="top" secondItem="Vwp-kQ-mPt" secondAttribute="top" id="0Y5-kF-jHB"/>
+                                                                <constraint firstItem="xJS-cf-MZB" firstAttribute="leading" secondItem="Vwp-kQ-mPt" secondAttribute="leading" constant="2" id="47o-5e-Q7x"/>
+                                                                <constraint firstAttribute="trailing" secondItem="xJS-cf-MZB" secondAttribute="trailing" constant="2" id="IMJ-t3-TNS"/>
+                                                                <constraint firstAttribute="bottom" secondItem="xJS-cf-MZB" secondAttribute="bottom" id="tXZ-r5-evm"/>
+                                                            </constraints>
                                                             <connections>
                                                                 <outlet property="textField" destination="xJS-cf-MZB" id="Kj4-FI-zig"/>
                                                             </connections>
@@ -849,9 +859,8 @@ CA
                                                             <rect key="frame" x="374" y="1" width="417" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Km-yy-0b8">
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="8Km-yy-0b8">
                                                                     <rect key="frame" x="0.0" y="0.0" width="417" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="cat-ny-FsW">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -859,6 +868,12 @@ CA
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="8Km-yy-0b8" secondAttribute="bottom" id="SbS-nm-StD"/>
+                                                                <constraint firstItem="8Km-yy-0b8" firstAttribute="top" secondItem="PZ3-Be-vqY" secondAttribute="top" id="V7K-sb-qfh"/>
+                                                                <constraint firstItem="8Km-yy-0b8" firstAttribute="leading" secondItem="PZ3-Be-vqY" secondAttribute="leading" constant="2" id="smq-kU-jOk"/>
+                                                                <constraint firstAttribute="trailing" secondItem="8Km-yy-0b8" secondAttribute="trailing" constant="2" id="udh-oD-0M4"/>
+                                                            </constraints>
                                                             <connections>
                                                                 <outlet property="textField" destination="8Km-yy-0b8" id="lSK-Af-Ifb"/>
                                                             </connections>
@@ -875,11 +890,11 @@ CA
                                     </subviews>
                                     <nil key="backgroundColor"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="b2s-z9-zzP">
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="b2s-z9-zzP">
                                     <rect key="frame" x="1" y="357" width="793" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Xn8-CB-8u7">
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Xn8-CB-8u7">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -1154,6 +1169,6 @@ Gw
         <image name="NSRemoveTemplate" width="11" height="11"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cc1-YB-sdk"/>
+        <segue reference="lr0-c8-hKS"/>
     </inferredMetricsTieBreakers>
 </document>
