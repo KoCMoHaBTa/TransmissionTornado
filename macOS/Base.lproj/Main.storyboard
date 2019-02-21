@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -1070,10 +1070,10 @@ Gw
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="f9w-kl-KBg">
-                                <rect key="frame" x="133" y="10" width="300" height="21"/>
+                                <rect key="frame" x="134" y="10" width="298" height="21"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1l9-7h-fqP">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="298" height="21"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="0cc-lI-rT2">
                                                 <rect key="frame" x="-2" y="4" width="86" height="17"/>
@@ -1084,7 +1084,7 @@ Gw
                                                 </textFieldCell>
                                             </textField>
                                             <popUpButton verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="a4y-G7-EJm">
-                                                <rect key="frame" x="88" y="-3" width="79" height="25"/>
+                                                <rect key="frame" x="88" y="-3" width="77" height="25"/>
                                                 <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Qae-2B-afw" id="p0I-hC-Gob">
                                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="menu"/>
@@ -1098,7 +1098,7 @@ Gw
                                                 </popUpButtonCell>
                                             </popUpButton>
                                             <button horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cJI-HT-8ZV">
-                                                <rect key="frame" x="166" y="-7" width="65" height="32"/>
+                                                <rect key="frame" x="164" y="-7" width="65" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2vB-og-Ofs">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
@@ -1108,7 +1108,7 @@ Gw
                                                 </connections>
                                             </button>
                                             <button horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="OhW-Qc-tdp">
-                                                <rect key="frame" x="227" y="-7" width="79" height="32"/>
+                                                <rect key="frame" x="225" y="-7" width="79" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Select" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5dI-xF-xIW">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
@@ -1134,7 +1134,6 @@ Gw
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="1l9-7h-fqP" firstAttribute="leading" secondItem="f9w-kl-KBg" secondAttribute="leading" id="DLy-CL-Cy7"/>
-                                    <constraint firstAttribute="width" constant="300" id="RaA-ke-fZp"/>
                                     <constraint firstItem="1l9-7h-fqP" firstAttribute="top" secondItem="f9w-kl-KBg" secondAttribute="top" id="Vh2-Eo-f54"/>
                                     <constraint firstAttribute="trailing" secondItem="1l9-7h-fqP" secondAttribute="trailing" id="csS-pS-x5q"/>
                                     <constraint firstAttribute="bottom" secondItem="1l9-7h-fqP" secondAttribute="bottom" id="m3K-72-Q1b"/>
@@ -1163,9 +1162,9 @@ Gw
     </scenes>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
-        <image name="NSFolder" width="128" height="128"/>
-        <image name="NSInfo" width="128" height="128"/>
-        <image name="NSMobileMe" width="128" height="128"/>
+        <image name="NSFolder" width="32" height="32"/>
+        <image name="NSInfo" width="32" height="32"/>
+        <image name="NSMobileMe" width="32" height="32"/>
         <image name="NSRemoveTemplate" width="11" height="11"/>
     </resources>
     <inferredMetricsTieBreakers>
