@@ -61,6 +61,7 @@
 		E65A1E8C1F93B4AF00762BB4 /* AddServerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServerViewController.swift; sourceTree = "<group>"; };
 		E65A1E8E1F93F2B400762BB4 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		E65A1E901F93F88B00762BB4 /* Torrent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Torrent.swift; sourceTree = "<group>"; };
+		E66E50C52220313C00C69B8D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E6CD969A216B9FCD00446B9B /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		E6CD96AF216BAB7500446B9B /* iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6CD96B1216BAB7500446B9B /* iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTests.swift; sourceTree = "<group>"; };
@@ -68,7 +69,6 @@
 		E6CD96BD216BABA400446B9B /* macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = macOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6CD96BF216BABA400446B9B /* macOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSTests.swift; sourceTree = "<group>"; };
 		E6CD96C1216BABA400446B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6FBD0761FB106FC00226930 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		E6FBD07B1FB1076E00226930 /* TransmissionTornado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransmissionTornado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6FBD07D1FB1076E00226930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6FBD07F1FB1076E00226930 /* ServersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersViewController.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 		E65A1E681F93A0AB00762BB4 = {
 			isa = PBXGroup;
 			children = (
-				E6FBD0761FB106FC00226930 /* README */,
+				E66E50C52220313C00C69B8D /* README.md */,
 				E6FBD08B1FB107EB00226930 /* Shared */,
 				E65A1E731F93A0AB00762BB4 /* iOS */,
 				E6FBD07C1FB1076E00226930 /* macOS */,
