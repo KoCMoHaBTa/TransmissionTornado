@@ -14,6 +14,11 @@ struct Torrent {
     
     var name: String {
         
+        if self.url.scheme == "magnet" {
+            
+            return URLComponents(url: self.url, resolvingAgainstBaseURL: true)?.queryItems?.filter({ $0.name == "dn" }).first?.value?.appending(".magnet") ?? self.url.absoluteString
+        }
+        
         return self.url.lastPathComponent
     }
 }
@@ -179,7 +184,16 @@ extension Array where Element == Torrent {
         
         let files = try? FileManager.default.contentsOfDirectory(at: self.directory, includingPropertiesForKeys: [.creationDateKey])
         
-        let result = files?.map({ Element(url: $0) })
+        let result: [Element]? = files?.map({ url in
+            
+            //if the file is magent or url - the contents are the actual link
+            if url.pathExtension == "magnet" || url.pathExtension == "url", let string = try? String(contentsOf: url), let url = URL(string: string) {
+
+                return Element(url: url)
+            }
+            
+            return Element(url: url)
+        })
         return result ?? []
     }
     
@@ -187,10 +201,25 @@ extension Array where Element == Torrent {
 
         do {
             
-            let destinationFile = self.directory.appendingPathComponent(url.lastPathComponent, isDirectory: false)
-            try FileManager.default.copyItem(at: url, to: destinationFile)
-
-            let torrent = Torrent(url: destinationFile)
+            let torrent: Torrent
+            
+            if url.isFileURL {
+                
+                let destinationFile = self.directory.appendingPathComponent(url.lastPathComponent, isDirectory: false)
+                try FileManager.default.copyItem(at: url, to: destinationFile)
+                
+                torrent = Torrent(url: destinationFile)
+                
+            }
+            else {
+                
+                let type = url.scheme ?? "url"
+                let destinationFile = self.directory.appendingPathComponent(NSUUID().uuidString, isDirectory: false).appendingPathExtension(type)
+                
+                try url.absoluteString.write(to: destinationFile, atomically: true, encoding: .utf8)
+                torrent = Torrent(url: url)
+            }
+            
             NotificationCenter.default.post(name: .DidImportTorrentFile, object: nil, userInfo: ["torrent": torrent])
 
             return true
