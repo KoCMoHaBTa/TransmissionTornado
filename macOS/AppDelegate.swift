@@ -32,12 +32,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
     
-    func application(_ sender: NSApplication, openFile filename: String) -> Bool {
+    func application(_ application: NSApplication, open urls: [URL]) {
         
-        let addTorrent = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "AddTorrentViewController") as! AddTorrentViewController
-        addTorrent.url = URL(fileURLWithPath: filename)
-        NSWindow(contentViewController: addTorrent).makeKeyAndOrderFront(sender)
-        return true
+        urls.forEach { (url) in
+            
+            let addTorrent = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "AddTorrentViewController") as! AddTorrentViewController
+            addTorrent.url = url
+            NSWindow(contentViewController: addTorrent).makeKeyAndOrderFront(nil)
+        }
     }
 }
 
