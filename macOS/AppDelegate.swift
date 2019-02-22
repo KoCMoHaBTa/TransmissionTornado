@@ -35,7 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func application(_ sender: NSApplication, openFile filename: String) -> Bool {
         
         let addTorrent = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "AddTorrentViewController") as! AddTorrentViewController
-        
+        addTorrent.url = URL(fileURLWithPath: filename)
         NSWindow(contentViewController: addTorrent).makeKeyAndOrderFront(sender)
         return true
     }

@@ -18,14 +18,14 @@ class AddTorrentViewController: NSViewController, NSTextFieldDelegate {
         
         didSet {
             
-            self.urlTextFiled.stringValue = self.url?.absoluteString ?? ""
+            self.urlTextFiled?.stringValue = self.url?.absoluteString ?? ""
             self.validate()
         }
     }
     
-    private var serverSelectionViewController: ServersSelectionViewController {
+    private var serverSelectionViewController: ServersSelectionViewController? {
         
-        return self.children.first as! ServersSelectionViewController
+        return self.children.first as? ServersSelectionViewController
     }
     
     override func viewDidLoad() {
@@ -36,9 +36,16 @@ class AddTorrentViewController: NSViewController, NSTextFieldDelegate {
         self.validate()
     }
     
+    override func viewDidAppear() {
+        
+        super.viewWillAppear()
+        
+        self.validate()
+    }
+    
     func validate() {
         
-        self.addTorrentButton?.isEnabled = self.url != nil && self.serverSelectionViewController.selectedServer != nil
+        self.addTorrentButton?.isEnabled = self.url != nil && self.serverSelectionViewController?.selectedServer != nil
     }
     
     //MARK: - Actions
@@ -70,9 +77,9 @@ class AddTorrentViewController: NSViewController, NSTextFieldDelegate {
             return
         }
         
-        guard let server = self.serverSelectionViewController.selectedServer else {
+        guard let server = self.serverSelectionViewController?.selectedServer else {
             
-            self.serverSelectionViewController.addServer(sender)
+            self.serverSelectionViewController?.addServer(sender)
             self.validate()
             return
         }
