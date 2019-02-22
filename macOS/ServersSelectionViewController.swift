@@ -11,7 +11,6 @@ import Cocoa
 
 class ServersSelectionViewController: NSViewController {
     
-    @IBOutlet weak var titleLabel: NSTextField!
     @IBOutlet weak var serversDropDown: NSPopUpButton! {
         
         didSet {

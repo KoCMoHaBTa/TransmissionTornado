@@ -39,13 +39,37 @@ extension Torrent {
                 
                 let paused = false
                 let downloadDir: String?
-                let metainfo: String //base64 encoded .torrent contents
+                let metainfo: String?   //Either "filename" OR "metainfo" MUST be included.
+                let filename: String?   //Either "filename" OR "metainfo" MUST be included.
+                
+                init(downloadDir: String?, contents: Contents) {
+                    
+                    self.downloadDir = downloadDir
+                    
+                    switch contents {
+                        
+                        case .metainfo(let metainfo):
+                            self.metainfo = metainfo
+                            self.filename = nil
+                        
+                        case .url(let url):
+                            self.metainfo = nil
+                            self.filename = url.absoluteString
+                    }
+                }
+                
+                enum Contents {
+                    
+                    case metainfo(String)   //base64 encoded .torrent contents
+                    case url(URL)           //HTTP or magnet URL
+                }
                 
                 enum CodingKeys: String, CodingKey {
                     
                     case paused
                     case downloadDir = "download-dir"
                     case metainfo
+                    case filename
                 }
             }
         }
@@ -57,8 +81,17 @@ extension Torrent {
         
         do {
             
-            let data = try Data(contentsOf: self.url)
-            let requestData = RequestData(arguments: RequestData.Arguments(downloadDir: server.downloadDir, metainfo: data.base64EncodedString()))
+            let requestData: RequestData
+            
+            if self.url.isFileURL {
+             
+                let data = try Data(contentsOf: self.url)
+                requestData = .init(arguments: RequestData.Arguments(downloadDir: server.downloadDir, contents: .metainfo(data.base64EncodedString())))
+            }
+            else {
+                
+                requestData = .init(arguments: RequestData.Arguments(downloadDir: server.downloadDir, contents: .url(self.url)))
+            }
             
             guard let url = URL(string: server.address)?.appendingPathComponent("/transmission/rpc") else {
                 

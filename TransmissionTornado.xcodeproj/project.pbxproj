@@ -18,6 +18,7 @@
 		E65A1E8D1F93B4AF00762BB4 /* AddServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A1E8C1F93B4AF00762BB4 /* AddServerViewController.swift */; };
 		E65A1E8F1F93F2B400762BB4 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A1E8E1F93F2B400762BB4 /* Server.swift */; };
 		E65A1E911F93F88B00762BB4 /* Torrent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A1E901F93F88B00762BB4 /* Torrent.swift */; };
+		E66E50C72220456B00C69B8D /* AddTorrentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66E50C62220456B00C69B8D /* AddTorrentViewController.swift */; };
 		E6CD969B216B9FCD00446B9B /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD969A216B9FCD00446B9B /* Credentials.swift */; };
 		E6CD969C216B9FCD00446B9B /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD969A216B9FCD00446B9B /* Credentials.swift */; };
 		E6CD96B2216BAB7500446B9B /* iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD96B1216BAB7500446B9B /* iOSTests.swift */; };
@@ -62,6 +63,7 @@
 		E65A1E8E1F93F2B400762BB4 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		E65A1E901F93F88B00762BB4 /* Torrent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Torrent.swift; sourceTree = "<group>"; };
 		E66E50C52220313C00C69B8D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E66E50C62220456B00C69B8D /* AddTorrentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTorrentViewController.swift; sourceTree = "<group>"; };
 		E6CD969A216B9FCD00446B9B /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		E6CD96AF216BAB7500446B9B /* iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6CD96B1216BAB7500446B9B /* iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTests.swift; sourceTree = "<group>"; };
@@ -171,8 +173,9 @@
 				E6FBD07D1FB1076E00226930 /* AppDelegate.swift */,
 				E6FBD07F1FB1076E00226930 /* ServersViewController.swift */,
 				E657DCD01FB267BA009FED71 /* AddServerViewController.swift */,
-				E6FBD0831FB1076E00226930 /* Main.storyboard */,
+				E66E50C62220456B00C69B8D /* AddTorrentViewController.swift */,
 				E6039F7C1FB76D2C00DC035A /* ServersSelectionViewController.swift */,
+				E6FBD0831FB1076E00226930 /* Main.storyboard */,
 				E6FBD0861FB1076E00226930 /* Info.plist */,
 				E6FBD0871FB1076E00226930 /* macOS.entitlements */,
 			);
@@ -394,6 +397,7 @@
 				E6FBD07E1FB1076E00226930 /* AppDelegate.swift in Sources */,
 				E6FBD08D1FB107F600226930 /* Server.swift in Sources */,
 				E6FBD08C1FB107F500226930 /* Torrent.swift in Sources */,
+				E66E50C72220456B00C69B8D /* AddTorrentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

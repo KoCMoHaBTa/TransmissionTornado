@@ -68,47 +68,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         return true
     }
-    
-    @IBAction func openTorrent(_ sender: Any?) {
-        
-        let serversDropDown = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "ServersSelectionViewController") as! ServersSelectionViewController
-        let panel = NSOpenPanel()
-        panel.accessoryView = serversDropDown.view
-        panel.isAccessoryViewDisclosed = true
-        panel.allowedFileTypes = ["torrent"]
-        
-        panel.begin { (response) in
-            
-            if case .OK = response, let url = panel.urls.first {
-                
-                DispatchQueue.main.async {
-                    
-                    guard let server = serversDropDown.selectedServer else {
-                        
-                        return
-                    }
-                    
-                    let torrent = Torrent(url: url)
-                    torrent.send(to: server, completion: { (error) in
-                        
-                        if let error = error {
-                            
-                            DispatchQueue.main.async {
-                                
-                                NSAlert(error: error).runModal()
-                            }
-                            return
-                        }
-                        
-                        //show the server
-                        if let url = URL(string: server.address) {
-                            
-                            NSWorkspace.shared.open(url)
-                        }
-                    })
-                }
-            }
-        }
-    }
 }
 
