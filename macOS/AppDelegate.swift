@@ -34,38 +34,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func application(_ sender: NSApplication, openFile filename: String) -> Bool {
         
-        let serversDropDown = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "ServersSelectionViewController") as! ServersSelectionViewController
+        let addTorrent = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "AddTorrentViewController") as! AddTorrentViewController
         
-        var window: NSWindow! =  nil
-        serversDropDown.didSelectServer = { server in
-            
-            let torrent = Torrent(url: URL(fileURLWithPath: filename))
-            torrent.send(to: server, completion: { (error) in
-                
-                if let error = error {
-                    
-                    DispatchQueue.main.async {
-                        
-                        NSAlert(error: error).runModal()
-                    }
-                    return
-                }
-                
-                //show the server
-                if let url = URL(string: server.address) {
-                    
-                    NSWorkspace.shared.open(url)
-                }
-                
-                window.close()
-            })
-        }
-        
-        window = NSWindow(contentViewController: serversDropDown)
-        window.title = "Open Torrent"
-        
-        window.makeKeyAndOrderFront(sender)
-
+        NSWindow(contentViewController: addTorrent).makeKeyAndOrderFront(sender)
         return true
     }
 }
