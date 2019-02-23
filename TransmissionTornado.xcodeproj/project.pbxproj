@@ -50,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		E6039F7C1FB76D2C00DC035A /* ServersSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersSelectionViewController.swift; sourceTree = "<group>"; };
+		E62801102220CB5300455249 /* set_build_number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = set_build_number.swift; sourceTree = "<group>"; };
 		E657DCD01FB267BA009FED71 /* AddServerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServerViewController.swift; sourceTree = "<group>"; };
 		E65A1E711F93A0AB00762BB4 /* TransmissionTornado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransmissionTornado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E65A1E741F93A0AB00762BB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				E66E50C52220313C00C69B8D /* README.md */,
+				E62801102220CB5300455249 /* set_build_number.swift */,
 				E6FBD08B1FB107EB00226930 /* Shared */,
 				E65A1E731F93A0AB00762BB4 /* iOS */,
 				E6FBD07C1FB1076E00226930 /* macOS */,
