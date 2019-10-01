@@ -88,7 +88,7 @@ class TorrentsViewController: UITableViewController {
                 }
                 
                 //delete the torrent
-                if let index = self.torrents.index(of: torrent) {
+                if let index = self.torrents.firstIndex(of: torrent) {
                     
                     self.torrents.remove(at: index)
                     try? FileManager.default.removeItem(at: torrent.url)
