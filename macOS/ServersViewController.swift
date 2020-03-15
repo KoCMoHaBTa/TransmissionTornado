@@ -63,7 +63,7 @@ class ServersViewController: NSViewController, NSTableViewDataSource, NSTableVie
         
         if let cell = cell as? NSTableCellView,
         let column = tableColumn,
-        let columnIndex = tableView.tableColumns.index(of: column) {
+        let columnIndex = tableView.tableColumns.firstIndex(of: column) {
             
             if columnIndex == 0 {
                 

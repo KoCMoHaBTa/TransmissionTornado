@@ -291,12 +291,13 @@
 					};
 					E6CD96BC216BABA400446B9B = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E6FBD07A1FB1076E00226930;
 					};
 					E6FBD07A1FB1076E00226930 = {
 						CreatedOnToolsVersion = 9.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -651,7 +652,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.TransmissionTornado.macOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransmissionTornado.app/Contents/MacOS/TransmissionTornado";
 			};
 			name = Debug;
@@ -671,7 +672,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.TransmissionTornado.macOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransmissionTornado.app/Contents/MacOS/TransmissionTornado";
 			};
 			name = Release;
@@ -692,7 +693,7 @@
 				PRODUCT_NAME = TransmissionTornado;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -712,7 +713,7 @@
 				PRODUCT_NAME = TransmissionTornado;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
